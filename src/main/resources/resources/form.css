@@ -1,0 +1,1410 @@
+body button,
+body input,
+body optgroup,
+body select,
+body textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+body button {
+  overflow: visible;
+}
+
+body button,
+body select {
+  text-transform: none;
+}
+
+body button,
+body html input[type="button"],
+body input[type="reset"],
+body input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+body button[disabled],
+body html input[disabled] {
+  cursor: default;
+}
+
+body button::-moz-focus-inner,
+body input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+body input {
+  line-height: normal;
+}
+
+body input[type="number"]::-webkit-inner-spin-button,
+body input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+body input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+body input[type="search"]::-webkit-search-cancel-button,
+body input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+body fieldset {
+  border: 0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+body legend {
+  border: 0;
+  padding: 0;
+}
+
+body textarea {
+  overflow: auto;
+}
+
+body optgroup {
+  font-weight: 500;
+}
+
+body .no-select, body input[type=range],
+body input[type=range] + .thumb {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Advanced Tool */
+
+.form-cell .pq-grid table td.pq-grid-col{
+    border-right: 1px solid #d4d4d4 !important;
+    border-top: 1px solid #d4d4d4 !important;
+}
+.pq-grid tr td.pq-grid-number-cell{
+    background: transparent !important;
+    border-bottom: 1px solid #d4d4d4 !important;
+    border-right: 1px solid #d4d4d4 !important;
+}
+
+.pq-grid td.pq-grid-col {
+    font-weight: 500 !important;
+    text-shadow: 0 0 !important;
+}
+.form-cell .pq-grid table td.pq-grid-cell, .subform-cell .pq-grid table td.pq-grid-cell{
+    border-right: 1px solid #d4d4d4 !important;
+    border-bottom: 1px solid #d4d4d4 !important;
+}
+.adgrid .pq-grid-inner{
+    border: 1px solid #d4d4d4 !important;
+    border-radius: 0px !important;
+}
+
+tr.pq-grid-oddRow td, td.pq-grid-cell{
+    background: transparent !important;
+}
+
+.adgrid .editor-cell{
+    background: #fff !important;
+    border: 1px solid #d4d4d4 !important;
+    border-radius: 0px !important;
+}
+
+body .adgrid .editor-cell .actions-buttons button {
+    color: #fff !important;
+    background-color: #5d9cec;
+    border: 1px solid #5d9cec;
+    margin-left: 5px;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pq-grid-toolbar .ui-button {
+    background-image: linear-gradient(transparent,transparent) !important;
+    padding: 4px 15px !important;
+    color: #fff;
+}
+
+.pq-grid-toolbar .ui-button:hover {
+    opacity: 0.8;
+}
+
+.pq-grid-toolbar .ui-button .ui-icon{
+    display: unset !important;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: 0px solid !important;
+    background: #ededed !important;
+    font-weight: normal !important;
+    color: #212121 !important;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    border: 0px solid !important;
+    background: #ededed !important;
+    color: #212121 !important;
+}
+
+tr.pq-row-select td{
+    color: #212121 !important;
+}
+
+.pq-scrollbar-horiz div.right-btn:before{
+    content: "\f0da";
+    font-family: FontAwesome;
+    margin: 0 7px;
+}
+
+.pq-scrollbar-horiz div.left-btn:before{
+    content: "\f0d9";
+    font-family: FontAwesome;
+    margin: 0 5px;
+}
+
+.pq-sb-slider-h .horiz-slider-bg, .pq-sb-slider-h *{
+    background: #ccc !important;
+}
+
+.pq-scrollbar-horiz div.right-btn, .pq-scrollbar-horiz div.left-btn{
+    background: #eee !important;
+}
+
+.pq-scrollbar-horiz div.left-btn{
+    border-left: 1px solid #d4d4d4 !important;
+}
+
+div.pq-grid *:focus {
+    outline: 0px dotted !important;
+}
+
+div.pq-grid-toolbar .ui-button {
+    margin: 0 5px 0 0 !important;
+}
+div.pq-grid-toolbar{
+    padding: 5px !important;
+}
+.adgrid div.pq-grid-top, .adgrid div.pq-grid-bottom{
+    padding: 10px 0px !important;
+}
+
+
+/* Text Inputs + Textarea
+   ========================================================================== */
+body ::-webkit-input-placeholder{
+    color: #B6B6B6;
+}
+body :-moz-placeholder{
+    color: #B6B6B6;
+}
+body ::-moz-placeholder{
+    color: #B6B6B6;
+}
+body :-ms-input-placeholder{
+    color: #B6B6B6;
+}
+body .filter-cell select:not([multiple]).emptyValue {
+    color: #B6B6B6 !important;
+}
+
+/* Text inputs */
+body input:not([type]),
+body input[type=text],
+body input[type=password],
+body input[type=email],
+body input[type=url],
+body input[type=time],
+body input[type=date],
+body input[type=datetime],
+body input[type=datetime-local],
+body input[type=tel],
+body input[type=number],
+body input[type=search],
+body textarea,
+body select:not([class^=ui]),
+body .editor-cell input:not([type]),
+body .editor-cell input[type=text],
+body .editor-cell input[type=password],
+body .editor-cell input[type=email],
+body .editor-cell input[type=url],
+body .editor-cell input[type=time],
+body .editor-cell input[type=date],
+body .editor-cell input[type=datetime],
+body .editor-cell input[type=datetime-local],
+body .editor-cell input[type=tel],
+body .editor-cell input[type=number],
+body .editor-cell input[type=search],
+body .editor-cell textarea,
+body .editor-cell select:not([class^=ui]){
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  height: 30px;
+  min-height: 30px;
+  width: 100%;
+  max-width: 70%;
+  margin: 0 0 15px 0;
+  padding: .375rem 1rem;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  background-color: #fff;
+  color: #212121;
+}
+
+body .mce-form input:not([type]),
+body .mce-form input[type=text],
+body .mce-form input[type=password],
+body .mce-form input[type=email],
+body .mce-form input[type=url],
+body .mce-form input[type=time],
+body .mce-form input[type=date],
+body .mce-form input[type=datetime],
+body .mce-form input[type=datetime-local],
+body .mce-form input[type=tel],
+body .mce-form input[type=number],
+body .mce-form input[type=search],
+body .mce-form textarea,
+body .mce-form select:not([class^=ui]) {
+    width: auto;
+    max-width: inherit;
+}
+
+body select[multiple]:not([class^=ui]),
+body .editor-cell select[multiple]:not([class^=ui]){
+  height: auto;
+}
+
+body select[multiple]:not([class^=ui]) option,
+body .editor-cell select[multiple]:not([class^=ui]) option{
+  padding: 5px 2px;
+}
+
+body .editor-cell input:not([type]),
+body .editor-cell input[type=text],
+body .editor-cell input[type=password],
+body .editor-cell input[type=email],
+body .editor-cell input[type=url],
+body .editor-cell input[type=time],
+body .editor-cell input[type=date],
+body .editor-cell input[type=datetime],
+body .editor-cell input[type=datetime-local],
+body .editor-cell input[type=tel],
+body .editor-cell input[type=number],
+body .editor-cell input[type=search],
+body .editor-cell textarea,
+body .editor-cell select:not([class^=ui]){
+    color: #212121;
+}
+
+body input:not([type]):focus:not([readonly]),
+body input[type=text]:focus:not([readonly]),
+body input[type=password]:focus:not([readonly]),
+body input[type=email]:focus:not([readonly]),
+body input[type=url]:focus:not([readonly]),
+body input[type=time]:focus:not([readonly]),
+body input[type=date]:focus:not([readonly]),
+body input[type=datetime]:focus:not([readonly]),
+body input[type=datetime-local]:focus:not([readonly]),
+body input[type=tel]:focus:not([readonly]),
+body input[type=number]:focus:not([readonly]),
+body input[type=search]:focus:not([readonly]),
+body textarea:focus:not([readonly]),
+body select:focus:not([readonly]):not([class^=ui]),
+body input.focus,
+body .editor-cell input:not([type]):focus:not([readonly]),
+body .editor-cell input[type=text]:focus:not([readonly]),
+body .editor-cell input[type=password]:focus:not([readonly]),
+body .editor-cell input[type=email]:focus:not([readonly]),
+body .editor-cell input[type=url]:focus:not([readonly]),
+body .editor-cell input[type=time]:focus:not([readonly]),
+body .editor-cell input[type=date]:focus:not([readonly]),
+body .editor-cell input[type=datetime]:focus:not([readonly]),
+body .editor-cell input[type=datetime-local]:focus:not([readonly]),
+body .editor-cell input[type=tel]:focus:not([readonly]),
+body .editor-cell input[type=number]:focus:not([readonly]),
+body .editor-cell input[type=search]:focus:not([readonly]),
+body .editor-cell textarea:focus:not([readonly]),
+body .editor-cell select:focus:not([readonly]):not([class^=ui]),
+body .editor-cell input.focus{
+  border: 1px solid #656565;
+}
+
+
+body .filter-cell input:not([type]),
+body .filter-cell input[type=text],
+body .filter-cell input[type=password],
+body .filter-cell input[type=email],
+body .filter-cell input[type=url],
+body .filter-cell input[type=time],
+body .filter-cell input[type=date],
+body .filter-cell input[type=datetime],
+body .filter-cell input[type=datetime-local],
+body .filter-cell input[type=tel],
+body .filter-cell input[type=number],
+body .filter-cell input[type=search],
+body .filter-cell textarea,
+body .filter-cell select:not([class^=ui]){
+    width: auto;
+    max-width: none;
+}
+
+@media screen and (max-width: 767px) {
+    body .form-container input:not([type]),
+    body .form-container input[type=text],
+    body .form-container input[type=password],
+    body .form-container input[type=email],
+    body .form-container input[type=url],
+    body .form-container input[type=time],
+    body .form-container input[type=date],
+    body .form-container input[type=datetime],
+    body .form-container input[type=datetime-local],
+    body .form-container input[type=tel],
+    body .form-container input[type=number],
+    body .form-container input[type=search],
+    body .form-container textarea, 
+    body .form-container select:not([class^=ui]),
+    body .form-container .form-cell-value,
+    body .form-container .subform-cell-value,
+    body .form-container .chosen-container{
+        max-width: 70%;
+    }
+    body .form-container textarea[cols] {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body .form-container input:not([type]),
+    body .form-container input[type=text],
+    body .form-container input[type=password],
+    body .form-container input[type=email],
+    body .form-container input[type=url],
+    body .form-container input[type=time],
+    body .form-container input[type=date],
+    body .form-container input[type=datetime],
+    body .form-container input[type=datetime-local],
+    body .form-container input[type=tel],
+    body .form-container input[type=number],
+    body .form-container input[type=search],
+    body .form-container textarea, 
+    body .form-container select:not([class^=ui]),
+    body .form-container .form-cell-value,
+    body .form-container .subform-cell-value,
+    body .form-container .chosen-container{
+        max-width: 100%;
+        width: 100%;
+    }
+    body .form-container textarea[cols] {
+        width: 100%;
+    }
+}
+
+body .form-container .form-cell-value,
+body .form-container .subform-cell-value,
+body .form-container .selector_element,
+body .form-container .form-fileupload,
+body .form-container .subform-fileupload,
+body .form-container .grid,
+body .form-container .spreadsheet_container{
+    min-height: 31px;
+    margin-bottom: 15px;
+}
+
+body .form-container .customHtml.no_label .form-cell-value,
+body .form-container .customHtml.no_label .subform-cell-value{
+    min-height: 0px;
+    margin-bottom: 0px;
+}
+
+body .form-container.readonly .form-cell-value,
+body .form-container .readonly .subform-cell-value,
+body .form-container.readonly .form-fileupload,
+body .form-container .readonly .subform-fileupload{
+    margin-bottom: 5px;
+}
+
+body .form-container .pq-td-div .form-cell-value,
+body .form-container .pq-td-div .subform-cell-value {
+    min-height: auto;
+    margin-bottom: 0;
+}
+
+body input:-webkit-autofill, body textarea:-webkit-autofill, body select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+    -webkit-text-fill-color: initial !important;
+}
+body input:focus:-webkit-autofill, body textarea:focus:-webkit-autofill, body select:focus:-webkit-autofill {
+    -webkit-box-shadow: 0 1px 0 0 #727272, 0 0 0px 1000px #fff inset !important;
+}
+
+/* Textarea */
+body textarea,
+body .editor-cell textarea{
+  height:auto;
+  overflow-y: hidden;
+  resize: none;
+}
+
+/* Radio Buttons
+   ========================================================================== */
+body .select_radio label, body .select_checkbox label {
+    margin-bottom: 0;
+}
+body .select_radio label > input[type="radio"]:not(:checked),
+body .select_radio label > input[type="radio"]:checked,
+body label > [type="radio"]:not(:checked),
+body label > [type="radio"]:checked {
+    display:none;
+}
+
+body .select_radio label > input[type="radio"] + i:after,
+body label > input[type="radio"] + i:after {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    content: "\f096";
+    color: #fff;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 500px;
+    
+}
+
+body .select_radio label > input[type="radio"]:checked + i:after,
+body label > input[type="radio"]:checked + i:after {
+    font:normal normal normal 14px/1 FontAwesome;
+    content: "\f111";
+    font-size: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+body .select_radio label > input[type="radio"]:disabled + i:after,
+body label > input[type="radio"]:disabled + i:after {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form-cell-value label, .subform-cell-value label {
+    display: block;
+    float: left;
+    width: 50%;
+    outline: 0px;
+    font-weight: 400;
+}
+
+.form-cell, .subform-cell {
+    position: relative;
+    clear: left;
+    padding: 5px 0px;
+}
+/* Checkboxes
+   ========================================================================== */
+/* CUSTOM CSS CHECKBOXES */
+/* Remove default checkbox */
+
+body .select_checkbox label > [type="checkbox"]:not(:checked),
+body .select_checkbox label > [type="checkbox"]:checked,
+body label > [type="checkbox"]:not(:checked),
+body label > [type="checkbox"]:checked {
+    display:none;
+}
+
+body .select_checkbox label > [type="checkbox"] + i:after,
+body label > input[type=checkbox] + i:after {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    content: "\f096";
+    color: #dde6e9;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff
+}
+
+body .select_checkbox label > [type="checkbox"]:checked + i:after,
+body label > input[type=checkbox]:checked + i:after {
+    content: "\f00c";
+    background-color: #5d9cec;
+    color: #fff;
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 600;
+    font-size: 12px;
+    border: 1px solid #5d9cec;
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    box-shadow: 0 0 0 0.2rem rgba(52,143,226,.25);
+}
+
+body .select_checkbox label > [type="checkbox"]:disabled + i:after,
+body label > input[type=checkbox]:disabled + i:after {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Select Field
+   ========================================================================== */
+body select:not([class^="ui-"]):not([multiple]),
+body .editor-cell select:not([class^="ui-"]):not([multiple]) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%239E9E9E' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/%3E%3C/svg%3E");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 4px;
+}
+body select:not([class^="ui-"])::-ms-expand,
+body .editor-cell select:not([class^="ui-"])::-ms-expand {
+    display: none;
+}
+body.rtl select:not([class^="ui-"]):not([multiple]),
+body.rtl .editor-cell select:not([class^="ui-"]):not([multiple]) {
+  background-position: 0% 50%;
+}
+
+body select:not([class^="ui-"]):not([multiple]) option,
+body .editor-cell select:not([class^="ui-"]):not([multiple]) option {
+    color: #000;
+    background: #fff;
+}
+
+body .filter-cell select:not([class^="ui-"]):not([multiple]){
+  padding-right: 30px;
+}
+body.rtl .filter-cell select:not([class^="ui-"]):not([multiple]){
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+body .filter-cell select[multiple]{
+    margin-bottom: 13px !important;
+}
+  
+body select:not([class^="ui-"]):disabled {
+  background-image: none;
+}
+
+body select:not([class^="ui-"]):focus,
+body .editor-cell select:not([class^="ui-"]):focus{
+    -webkit-box-shadow: 0 1px 0 0 #727272;
+}
+
+body .close-icon:after {
+    right: 37px;
+    content: "\f057";
+    font-family: 'FontAwesome';
+    color: lightgrey;
+    background-color: transparent;
+    box-shadow: none;
+    line-height: 12px;;
+}
+
+body .hasDatepicker + a, body .hasDatepicker + img {
+    position: absolute;
+    padding: 5px 5px;
+    right: 0;
+    display: inline-block;
+}
+body.rtl .hasDatepicker + a, body.rtl .hasDatepicker + img {
+    left: 0;
+    right: auto;
+}
+
+body .filter-cell .hasDatepicker + a, body .filter-cell .hasDatepicker + img {
+    right: auto;
+    margin-left: -21px;
+}
+body.rtl .filter-cell .hasDatepicker + a, body.rtl .filter-cell .hasDatepicker + img {
+    left: auto;
+    margin-left: auto;
+    margin-right: -21px;
+}
+body .filter-cell input.hasDatepicker {
+    padding-right: 25px;
+}
+body.rtl .filter-cell input.hasDatepicker {
+    padding-left: 25px;
+    padding-right: auto;
+}
+
+body .filter-cell .form-button{
+    margin-bottom: 15px;
+}
+
+body .filter-cell {
+    padding-top: 10px;
+}
+
+body .form-container [class*=form-cell-value] > span,
+body .form-container [class*=form-cell-value] > .readonly_label,
+body .form-container label.label + span:not(.form-cell-value):not(.subform-cell-value) {
+    padding: 6px 10px 0 1px;
+    display: inline-block;
+    font-weight: normal;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+body .form-container label.label + span:not(.form-cell-value):not(.subform-cell-value) {
+    padding: 6px 10px 7px 1px;
+    margin-bottom: 15px;
+}
+body .form-container.readonly label.label + span:not(.form-cell-value):not(.subform-cell-value),
+body .form-container .readonly label.label + span:not(.form-cell-value):not(.subform-cell-value){
+    margin-bottom: 5px;
+}
+body.rtl .form-container [class*=form-cell-value] > span,
+body.rtl .form-container [class*=form-cell-value] > .readonly_label,
+body.rtl .form-container label.label + span:not(.form-cell-value):not(.subform-cell-value) {
+    padding: 6px 1px 0 10px;
+}
+body.rtl .form-container label.label + span:not(.form-cell-value):not(.subform-cell-value) {
+    padding: 6px 1px 7px 10px;
+}
+body .form-container .pq-td-div [class*=form-cell-value] > span,
+body .form-container .pq-td-div [class*=form-cell-value] > .readonly_label,
+body .form-container .pq-td-div label.label + span:not(.form-cell-value):not(.subform-cell-value) {
+    padding: 0;
+}
+
+body .form-column, body .subform-column {
+    max-width: 99%;
+    margin: 0 0.5%;
+    color: inherit;
+    min-width: inherit;
+    padding: 15px;
+}
+
+body .form-cell, body .subform-cell {
+    color: inherit;
+    padding: 0;
+}
+
+body .subform-cell-validator, body .form-cell-validator {
+    color: red;
+    font-size: smaller;
+    position: absolute;
+    top: 8px;
+    right: 4px;
+}
+body.rtl .subform-cell-validator, body.rtl .form-cell-validator {
+    left: 4px;
+    right: auto;
+}
+
+@media screen and (max-width: 480px) {
+    body .subform-cell-validator, body .form-cell-validator {
+        position: relative;
+        top: initial;
+        right: initial;
+        left: initial;
+    }
+}
+
+body #form-canvas {
+    margin: 0;
+    padding: 10px;
+    background: #eee;
+    border-radius: 0px;
+}
+
+body #form-canvas .h1,
+body #form-canvas h1 {
+    font-size: 27px
+}
+
+body #form-canvas .h2,
+body #form-canvas h2 {
+    font-size: 22px
+}
+
+body #form-canvas .h3,
+body #form-canvas h3 {
+    font-size: 18px
+}
+
+body #form-canvas .h4,
+body #form-canvas h4 {
+    font-size: 16px
+}
+
+body #form-canvas .h5,
+body #form-canvas h5 {
+    font-size: 13px
+}
+
+body #form-canvas .h6,
+body #form-canvas h6 {
+    font-size: 12px
+}
+
+body #form-canvas .label {
+    padding: 8px 10px 0 0;
+    white-space: normal;
+    position: relative;
+    font-weight: 500;
+}
+body.rtl #form-canvas .label {
+    padding: 8px 0px 0 10px;
+}
+
+body #form-canvas .form-section, body #form-canvas .subform-section {
+    margin-top: 0;
+}
+
+body #form-canvas .form-section:not(.form-section-empty) + .form-section:not(.no_label), body #form-canvas .subform-section:not(.subform-section-empty) + .subform-section:not(.no_label) {
+    margin-top: 20px ;
+    border-top: 1px solid rgba(0,0,0,.125);
+    border-radius: 0px
+}
+
+legend, body #form-canvas .form-section-title span, body #form-canvas .subform-section-title span {
+    text-shadow: none;
+    margin-bottom: 10px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    font-weight: 100;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+}
+
+h3.form-column-label, h3.subform-column-label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body .form fieldset {
+    border:0;
+    margin: 0;
+    padding: 5px;
+}
+
+body .subform-container, body .subform-section {
+    background: transparent;
+}
+
+body .subform-container.has-frame {
+    margin-top: 0;
+}
+
+body .subform-cell .subform-container.has-frame {
+    margin-bottom: 15px;
+}
+
+body .form-column > .subform-cell {
+    margin-left: -0.5%;
+    margin-right: -0.5%;
+}
+
+body .subform-container.has-frame .subform-title {
+    position: absolute;
+    top: -17px;
+    padding: 0 10px;
+}
+
+body .form-fileupload {
+    padding-top:6px;
+}
+
+body .form-fileupload-value {
+    padding: 0;
+}
+
+body .chosen-container-multi .chosen-choices,
+body .chosen-container-single .chosen-single {
+    height: 35px;
+    box-shadow:none;
+    background-color: transparent;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: .375rem 2rem .375rem 1rem;
+}
+
+body .chosen-container-multi,
+body .chosen-container-single{
+    margin-bottom: 15px;
+}
+
+body .chosen-container-multi .chosen-choices li.search-choice {
+    margin: 0px 5px 5px 0;
+    position: relative;
+    margin: 3px 5px 3px 0;
+    padding: 3px 20px 3px 5px;
+    border: 1px solid #bdc6d0;
+    max-width: 100%;
+    border-radius: 3px;
+    line-height: 13px;
+    cursor: default;
+    background-image: linear-gradient(transparent 20%, transparent 50%, transparent 52%, transparent 100%);
+    background-color: transparent;
+}
+
+body .chosen-container-single .chosen-single abbr {
+    top:10px;
+}
+
+body .chosen-container-single .chosen-single div {
+    top:4px;
+}
+
+body .chosen-container-single.chosen-with-drop .chosen-single {
+    padding-left: 5px;
+    color: #000;
+}
+body.rtl .chosen-container-single.chosen-with-drop .chosen-single {
+    padding-right: 5px;
+    padding-left:auto;
+}
+
+body .chosen-container-multi.chosen-container-active .chosen-choices,
+body .chosen-container-active .chosen-single {
+    border:0;
+}
+
+body .chosen-container-single .chosen-search input[type="text"] {
+    color: initial;
+}
+
+body .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    color: inherit !important;
+    margin: 0;
+}
+
+body .chosen-disabled {
+    opacity: 1 !important;
+}
+
+body .chosen-disabled.chosen-container-single .chosen-single abbr,
+body .chosen-disabled.chosen-container-single .chosen-single div{
+    display:none;
+}
+
+body .form-container .chosen-container {
+    width: 100% !important;
+    max-width: 70%;
+}
+
+body .form-container .selector_item {
+    border: 0;
+    display: block;
+    float: none;
+    padding-left: 0;
+}
+body.rtl .form-container .selector_item {
+    padding-right: 0;
+}
+
+body .form-container .selector_item .selector_remove {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    color:transparent;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px 5px 2px 0;
+    position: relative;
+}
+body.rtl .form-container .selector_item .selector_remove {
+    margin: 2px 0px 2px 5px;
+}
+
+body .form-container .selector_item .selector_remove:hover {
+    color: transparent;
+    opacity: 0.7;
+}
+
+body .form-container .selector_item .selector_remove:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f00d";
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    font-size: 11px;
+}
+body.rtl .form-container .selector_item .selector_remove:after {
+    right: 3px;
+    left:auto;
+}
+
+body .multiPagedForm.wizard .page-nav-panel{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 10px;
+}
+body .multiPagedForm.tab .page-nav-panel {
+    border-bottom: 0; 
+    margin-bottom: 10px; 
+}
+
+body .multiPagedForm.wizard .page-nav-panel ul,
+body .multiPagedForm.tab .page-nav-panel ul {
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+    margin: 0;
+    box-shadow: inset 0 -2px 0 0 transparent !important;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+body .multiPagedForm.tab .page-nav-panel ul li.nav_item {
+    position: relative;
+    padding: 0 10px;
+    border-bottom: solid 1px #dee2e6;
+}
+
+body .multiPagedForm.wizard .page-nav-panel ul li.nav_item{
+    border-bottom: solid 0px;
+}
+
+
+body .multiPagedForm.tab .page-nav-panel ul li.nav_item.current {
+    border: solid 1px #dee2e6;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0px;
+    border-color: #dee2e6;
+}
+
+body .multiPagedForm.wizard .page-nav-panel ul li.nav_item.current{
+    border: 0px;
+}
+
+body .multiPagedForm.wizard .page-nav-panel .nav_item.current button,
+body .multiPagedForm.tab .page-nav-panel .nav_item.current button,
+body .multiPagedForm.tab .page-nav-panel .nav_item button {
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    color: #007bff !important;
+    font-weight:100;
+}
+
+body .multiPagedForm.wizard .page-nav-panel .nav_item button{
+    border: 1px solid rgba(0,0,0,.25);
+    border-radius: 0px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: rgba(0,0,0,.25) !important;
+    padding: 9px 17px;
+    box-shadow: 0 1px 1.5px 1px rgba(0,0,0,0);
+}
+
+body .multiPagedForm.wizard .page-nav-panel .nav_item button:hover{
+    border: 1px solid #007bff;
+    color: #007bff !important;
+}
+
+body .multiPagedForm.wizard .page-nav-panel .nav_item.current button:disabled, body .multiPagedForm.wizard .page-nav-panel .nav_item.current button{
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: white !important;
+}
+body .multiPagedForm.tab .page-nav-panel .nav_item.current button:disabled, body .multiPagedForm.tab .page-nav-panel .nav_item.current button {
+    opacity: 1;
+    color: #495057 !important;
+}
+
+body .multiPagedForm.wizard .page-nav-panel .nav_item.current:after, body .multiPagedForm.tab .page-nav-panel .nav_item.current:after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: transparent !important;
+}
+body.rtl .multiPagedForm.wizard .page-nav-panel .nav_item.current:after, body .multiPagedForm.tab .page-nav-panel .nav_item.current:after {
+    right: 0;
+    left:auto;
+}
+
+.mpf-container{
+    padding-bottom: 25px;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px){
+    body .multiPagedForm.wizard .page-nav-panel .nav_item {
+        background: none;
+        position: relative;
+        padding-right: 0;    
+        margin-right: 7px;
+    }
+    body.rtl .multiPagedForm.wizard .page-nav-panel .nav_item {
+        padding-right: auto;    
+        margin-right: auto;
+        padding-left: 0;    
+        margin-left: 7px;
+    }
+    body .multiPagedForm.wizard .page-nav-panel .nav_item:before {
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f105";
+        display: block;
+        color: inherit;
+        position: absolute;
+        top: 10px;
+        left: -6px;
+        font-size: 18px;
+        color: #aaa;
+    }
+    body.rtl .multiPagedForm.wizard .page-nav-panel .nav_item:before {
+        right: -6px;
+        left:auto;
+    }
+}
+
+@media (max-width: 767px){
+    body .multiPagedForm.wizard .page-nav-panel .nav_item button, body .multiPagedForm.tab .page-nav-panel .nav_item button {
+        background: none;
+        border-bottom:0;
+        padding: 8px;
+        margin: 0;
+        margin-bottom: 0px;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -khtml-border-radius: 0;
+        border-radius: 0;
+        border: #9E9E9E solid 2px;
+    }
+    body .multiPagedForm.wizard .page-nav-panel .nav_item.current, body .multiPagedForm.tab .page-nav-panel .nav_item.current {
+        border-bottom: 0;
+        border: 2px solid #727272;
+    }
+    body .multiPagedForm.wizard .page-nav-panel .nav_item.current button:disabled, body .multiPagedForm.tab .page-nav-panel .nav_item.current button:disabled, body .multiPagedForm.wizard .page-nav-panel .nav_item.current button, body .multiPagedForm.tab .page-nav-panel .nav_item.current button {
+        background: none;
+    }
+    body .multiPagedForm .page-container {
+        border-radius: 0;
+        margin-bottom: -2px;
+        margin-top: -12px;
+        border-top: 0;
+        border: 2px solid #727272;
+    }
+}
+
+body #form-canvas .form-error-message {
+    font-weight: normal;
+}
+
+body .form-cell .tablesaw thead tr:first-child th, body .subform-cell .tablesaw thead tr:first-child th,
+body .form-cell .grid td, body .form-cell .grid th, body .subform-cell .grid td, body .subform-cell .grid th {
+    border:0;
+    padding:8px;
+}
+body .form-cell .grid th{
+    font-weight: 500;
+}
+body .form-cell .grid thead tr {
+    background: #9E9E9E;
+}
+
+body .form-cell .grid tbody tr:nth-child(odd) {
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+body .adgrid .editor-cell .actions-buttons button {
+    color: #000;
+}
+.popupBody form fieldset legend {
+    padding: 10px;
+}
+body .grid.readonly a.grid-action-edit,
+body .grid-action-edit, body .grid-action-delete, body .grid-action-moveup, body .grid-action-moveup.disabled,
+body .grid-action-movedown, body .grid-action-movedown.disabled, body .grid-action-add{
+    background: none !important;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    margin: 2px;
+    padding: 0;
+    margin-right: 10px
+}
+body .grid.readonly a.grid-action-edit:after,
+body .grid-action-edit:after, body .grid-action-delete:after, body .grid-action-moveup:after, body .grid-action-moveup.disabled:after,
+body .grid-action-movedown:after, body .grid-action-movedown.disabled:after, body .grid-action-add:after{
+    height: 25px;
+    width: 25px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-right: 0px;
+    margin-top: 0px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 25px;
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-right: 10px
+}
+body .grid-action-edit:after{
+    content: "\f044";
+    color: #2e8bd3;
+    color: #fff;
+    background-color: #23b7e5;
+    border-color: #23b7e5;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+body .grid-action-delete:after{
+    content: "\f1f8";
+    color: #fff;
+    background-color: #F43530;
+    border-color: #F43530;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+body .grid-action-moveup:after{
+    content: '\f077';
+    color: #ffbb0e;
+}
+body .grid-action-movedown:after{
+    content: '\f078';
+    color: #ffbb0e;
+}
+body .grid-action-add:after {
+    content: '\f055';
+    font-family: 'FontAwesome';
+    font-size: 19px;
+    color: #fff;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    padding-top: 3px;
+    padding-left: 1px;
+}
+body .grid-action-moveup.disabled:after, body .grid-action-movedown.disabled:after{
+    color: #999999;
+}
+body .grid.readonly a.grid-action-edit:after {
+    content: '\f0f6';
+    color: #2e8bd3;
+}
+body .grid-action-header, body td.grid-action-cell {
+    width: 135px;
+    text-align: center;
+}
+.multiPagedForm {
+    margin-bottom: 15px;
+}
+.ql-container.ql-bubble{
+    border-bottom: 1px solid #9E9E9E;
+    margin-bottom: 15px;
+}
+.ql-container.ql-bubble.focus{
+    border-bottom: 1px solid #727272;
+    box-shadow: 0 1px 0 0 #727272;
+}
+
+.selector_element{
+    display: block;
+    margin-left: 0%;
+}
+
+#form-canvas{
+    border: solid 0px silver !important;
+}
+
+.pad{
+    border-radius: 5px;
+}
+
+.dropzone {
+    border: 2px dashed #bababa!important;
+    background: #fff !important;
+    outline: none;
+}
+
+.dz-message{
+    margin: 30px 0 !important;
+    font-size: 14px !important;
+}
+
+.fa-inbox:before {
+    content: "\f01c";
+    font-size: 25px;
+    color: #40a9ff;
+}
+
+.dz-message.support{
+    color: rgba(0,0,0,.45);
+    font-size: 13px;
+}
+
+.dz-message.needsclick{
+    font-size: 15px;
+}
+
+.dropzone:hover {
+    background: #f2f3f4!important;
+}
+
+.form-errors, .form-error {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    background: #f05050 !important;
+    border: 1px solid #f05050;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0 5px;
+}
+
+.fa-times-circle{
+    color: #ffffff;
+    padding-right: 5px;
+}
+
+#section-actions > div.form-column.form-column-horizontal{
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-cell > .btn-secondary{
+    background-color: white;
+    color: #212121;
+    border-color: rgba(255,255,255,.5);
+}
+
+.form-cell > .btn-secondary:hover{
+    background-color: #f2f2f2;
+    color: #212121;
+    border-color: rgba(255,255,255,.5);
+}
+
+.form-cell > .btn-secondary:focus{
+    color: #212121;
+    outline:0;
+    background-color: #f2f2f2;
+    border-color: transparent;
+    box-shadow: 0 0 0 0 rgba(33,33,33,.5);
+}
+
+.ui-widget-content {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #656565;
+    border-radius: .2rem !important;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    padding: 5px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+    background: transparent;
+    font-weight: normal;
+    color: #656565;
+    outline: none;
+}
+
+.ui-widget-header {
+    border: none;
+    background: #fff;
+    color: #656565;
+    font-weight: bold;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 45%;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    margin: 1px 1px;
+    border: none;
+    outline: none;
+}
+
+.ui-datepicker .ui-datepicker-title select:hover{
+    background: #eee;
+}
+
+ui-timepicker-select:hover{
+    background: #eee;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: none;
+    background: #eee;
+    font-weight: normal;
+    color: #656565;
+    top: 2px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover{
+    left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover{
+    right: 2px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: none;
+    background: #5d9cec;
+    font-weight: normal;
+    color: #fff;
+    border-radius: .2rem !important;
+}
+
+.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input {
+    border: 1px solid #dde6e9 !important;
+    border-bottom: solid 1px #dde6e9 !important;
+}
+
+dl {
+    margin: 20px 5px !important;
+}
+
+dt {
+    font-weight: 500 !important;
+}
+
+.ui-datepicker-trigger{
+    display: block;
+    -moz-box-sizing: border-box;
+    content: url(https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png);
+    height: 20px;
+    width: 21px;
+}
+
+a.trigger{
+    border-left: 1px solid #ccc;
+}
+
+.ui-timepicker-select{
+    width: 70%;
+    border: 1px solid #dde6e9 !important;
+    padding: .375rem 1rem;
+}

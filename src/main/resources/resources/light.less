@@ -1,0 +1,729 @@
+@fontColor : #212121;
+@fontLightColor : #727272;
+@escapedColor: escape(@primary);
+@fontLabelColor: #333;
+
+body:not(.popupBody) {
+    color: @fontLabelColor;
+    background-color: #eee;
+}
+body.embeded {
+    background-color: transparent;
+}
+header.navbar {
+    background-color: @primary;
+    background-image: linear-gradient(90deg,@primary,@primary);
+    box-shadow: 0 1px 1px rgba(0,0,0,.14);
+}
+header.navbar .header-nav {
+    background-color: transparent;
+}
+main .reset_position,
+main .grid-stack-item-header-action,
+a {
+    color: @accent;
+}
+.dataList table a{
+    color: darken(@accent, 5%);
+}
+
+td.row_action.footable-visible.footable-last-column > span > a{
+    color: @buttonText;
+    background: @button;
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2);
+}
+
+td.row_action.footable-visible.footable-last-column > span > a:hover{
+    background: darken(@button, 10%);
+}
+
+.dataList table a:hover,
+a:focus, a:hover {
+    color: @lightAccent;
+}
+header.navbar a {
+    color: @defaultFontColor;
+}
+#header-name a {
+    padding: 12px 10px;
+    color: @defaultFontColor;
+}
+.hi-trigger:before {
+    background: @primary;
+}
+.line-wrap .line {
+    background-color: @defaultFontColor;
+}
+
+header.navbar .header-nav .nav>li>a .badge{
+    background: #E91B0C !important;
+    border-color: #E91B0C;
+    border-radius: 50%;
+}
+header.navbar .dropdown-menu a{ 
+    color: #000;
+}
+header.navbar .dropdown-menu .dropdown-menu-sub-footer {
+    color: #828282;
+}
+header.navbar .dropdown-menu a span.message, header.navbar .dropdown-menu a span.time {
+    color: #4C4C4C;
+}
+li.dropdown-menu-title {
+    border-bottom: 1px solid #F0F0F0;
+    color: #4C4C4C;
+}
+#sidebar {
+    background: @menuBackgroundColor;
+    border-right: 1px solid #cfd8dc;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+#page > footer {
+    color: rgba(0,0,0,.65);
+}
+@media (max-width:1279px) {
+    #sidebar {
+        box-shadow: 0 0px 10px #0E1215
+    }
+    
+    body.horizontal_menu #sidebar #navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu{
+    display:block;
+    }
+}
+body#login #main > div {
+    background: transparent;
+    color: #fff;
+}
+
+body#login #page{
+    background-image: @LoginBackground;
+}
+.breadcrumb,
+.breadcrumb a {
+    color: @fontLightColor;
+}
+.breadcrumb a:last-child {
+    color: #7a7a7a !important;
+}
+body.horizontal_menu #sidebar a,
+.main-menu.nav-tabs>li.active>a, .main-menu.nav-tabs a.active,  {
+    color: fade(@menuFont, 70%);
+    font-weight: 500;
+}
+
+#sidebar li ul li.active a, #sidebar li ul li.active a, .main-menu.nav-tabs .active>a{
+    color: @menuFont;
+    font-weight: 500;
+}
+
+#sidebar li ul a:hover,.main-menu.nav-tabs a:hover, .main-menu.nav>li>a:hover, .main-menu.nav-tabs>li.active>a:hover{
+     color: @menuFont;
+}
+.main-menu.nav-tabs>li>a {
+    color: fade(@menuFont, 65%);
+}
+
+#navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu > li > ul > li > a{
+    color: fade(@menuFont, 65%);
+}
+
+#navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu > li > ul > li > a:hover{
+    color: @menuFont;
+}
+
+.main-menu.nav-tabs > li.active > a > span > i {
+    color: @menuFont;
+}
+
+.main-menu.nav>li>a:focus, .main-menu.nav>li>a:hover,
+.main-menu.nav-tabs>li.active>a, .main-menu.nav-tabs>li>a:hover {
+    border-left: 0px solid transparent;
+}
+.main-menu.nav-tabs>li.active>a{
+    background: @rowCountBackgroundColor;
+    color: @menuFont;
+}
+
+.main-menu.nav-tabs>li.active>ul{
+    border-left: 0px solid @primary !important;
+}
+
+.main-menu.nav-tabs > li.active > a.dropdown {
+    color: @menuFont;
+    border-left: 0px solid @menuFont;
+    font-weight: 500;
+}
+
+.main-menu.nav-tabs > li.mm-profile a img {
+    box-shadow: 0 0 0 2px transparent;
+}
+.main-menu.nav-tabs > li.mm-profile a small{
+    color: @profileFontColor;
+}
+.main-menu.nav-tabs > li.mm-profile a small.login_link{
+    color:@accent;
+}
+
+#navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu > li > a > span{
+    color: @profileFontColor;
+}
+
+.main-menu.nav-tabs > li.mm-profile a{
+    color: @profileFontColor;
+}
+
+.main-menu.nav-tabs > li.mm-profile a:focus small.login_link, .main-menu.nav-tabs > li.mm-profile a:hover small.login_link {
+    color: @lightAccent;
+}
+#sidebar li ul a {
+    color: fade(@menuFont, 70%);
+}
+@media (min-width:768px) {
+    body.horizontal_menu #sidebar {
+        background-image: none;
+    }
+    body.horizontal_menu.inline_menu #sidebar {
+        background: transparent;
+    }
+    body.horizontal_menu #sidebar .nav>li ul{
+        margin-top: 1px;
+        background: @menuBackgroundColor;
+        border: none !important;
+        border-top: 1px solid fade(@menuFont, 65%) !important;
+        border-top-width: 3px !important;
+        box-shadow: 0 2px 10px #00000057;
+    }
+    body.horizontal_menu.inline_menu #sidebar .nav> li ul{
+        padding-top: 0px;
+        margin-top: 1px;
+        background: @primary;
+        border: none !important;
+        border-top: 1px solid fade(@menuFont, 65%) !important;
+        border-top-width: 3px !important;
+        left: 0px;
+    }
+    
+    body.horizontal_menu #sidebar li ul>li>a, body.horizontal_menu #sidebar li ul>li>.sidemenu_inner {
+        color: fade(@menuFont, 65%);
+    }
+    
+    body.horizontal_menu #sidebar .main-menu.nav-tabs>li.active {
+        background-color: @rowCountBackgroundColor;
+    }
+    
+    body.horizontal_menu #sidebar .main-menu.nav-tabs>li.active>a{
+        color: @menuFont;
+    }
+    
+    body.horizontal_menu #sidebar .main-menu.nav-tabs>li.active>a>span>i{
+        color: @primary;
+    }
+    
+    body.horizontal_menu.inline_menu #sidebar .main-menu.nav-tabs>li.active>a{
+        box-shadow: none;
+        color: @primary;
+    }
+    body.horizontal_menu.inline_menu header.navbar .header-nav .nav>li.user-link img {
+        border: 2px solid fade(@defaultFontColor, 13%);
+    }
+    body.horizontal_menu #sidebar a,
+    body.horizontal_menu .main-menu.nav-tabs>li.active>a, body.horizontal_menu .main-menu.nav-tabs>li.active>a:hover,
+     body.horizontal_menu .main-menu.nav-tabs a.active, body.horizontal_menu .main-menu.nav-tabs a:hover {
+        color: fade(@menuFont, 65%);
+    }
+    body.horizontal_menu #sidebar li ul a:hover{
+         color: @menuFont;
+    }
+    body.horizontal_menu.inline_menu #sidebar li ul li.active a span.badge{
+        color: @rowCountBackgroundColor;
+        background: @primary;
+    }
+    body.horizontal_menu.inline_menu #sidebar li ul li.active a,
+    body.horizontal_menu.inline_menu #sidebar li ul li.active a,body.horizontal_menu.inline_menu .main-menu.nav-tabs .active>a{
+        color: @primary;
+        background: @rowCountBackgroundColor;
+    }
+    
+    body.horizontal_menu #sidebar li ul li.active a,
+    body.horizontal_menu #sidebar li ul li.active a,body.horizontal_menu .main-menu.nav-tabs .active>a{
+        color: @menuFont;
+        background: @rowCountBackgroundColor;
+    }
+    body.horizontal_menu .main-menu.nav>li>a:hover{
+        background: #eee;
+    }
+    body.horizontal_menu .main-menu.nav-tabs>li>a {
+        color: fade(@defaultFontColor, 65%);
+    }
+    
+    body.horizontal_menu .main-menu.nav-tabs > li.mm-profile a img {
+        box-shadow: 0 0 0 2px fade(@defaultFontColor, 13%);
+    }
+    body.horizontal_menu .main-menu.nav-tabs > li.mm-profile a small{
+        color: fade(@defaultFontColor, 70%);
+    }
+    body.horizontal_menu #sidebar li ul a {
+        color: fade(@defaultFontColor, 70%);
+    }
+    
+    body.horizontal_menu #sidebar #navigation > ul.user-menu.nav.nav-tabs.nav-stacked.main-menu{
+        display: none;
+    }
+}
+body:not(#login).embeded #content > main > div:not(.quickEdit),
+body:not(#login).embeded #content > main > table{
+    background: transparent;
+}
+.page-loader {
+    background: @primary;
+}
+.page-loader .preloader p {
+    color: @defaultFontColor;
+}
+.preloader .plc-path, .plc-path {
+    stroke: @defaultFontColor;
+}
+.btn, .btn.focus, .btn:focus, .btn:active {
+    color: @buttonText;
+    background-color: @button;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.2), 0 4px 4px -2px rgba(0,0,0,.2);
+    margin: 1px 2px 0 0;
+    border: 1px solid @button;
+    outline: 0;
+}
+
+.btn:hover{
+    background-color: darken(@button, 10%);
+    border: 1px solid darken(@button, 10%);
+    color: @buttonText;
+}
+
+.btn.waves-input-wrapper{
+    color: @buttonText !important;
+    background-color: @button !important;
+}
+
+.btn.waves-input-wrapper:hover{
+    background-color: darken(@button, 10%) !important;
+    border: 1px solid darken(@button, 10%);
+}
+
+main .dataList th,
+main .dataList th a:hover,
+main .dataList th a{
+    color: @fontLabelColor;
+}
+
+body .dataList th,
+body .dataList th a:hover,
+body .dataList th a{
+    color: @fontLabelColor;
+    border-bottom: 1px solid #adadad;
+    font-weight: 500;
+}
+
+.pq-grid td.pq-grid-col{
+    color: @fontLabelColor !important;
+}
+
+main .footable.breakpoint>tbody>tr>td>span.footable-toggle{
+    color: @primary;
+}
+main .dataList th.sortable:hover {
+    background-color: lighten(@darkPrimary , 1%);
+}
+main .dataList thead tr {
+    background-color: transparent;
+}
+main .dataList tr.odd, 
+main .dataList tr.odd + tr.footable-row-detail{
+    background-color: #ededed;
+}
+main .dataList tr.tableRowEven, main .dataList tr.even,
+main .dataList tr.tableRowEven + tr.footable-row-detail, main .dataList tr.even + tr.footable-row-detail{
+    background-color: transparent;
+}
+main .dataList span.pagelinks a, main .dataList span.pagelinks strong, main .dataList span.pagelinks > span,
+body .dataList span.pagelinks a, body .dataList span.pagelinks strong, body .dataList span.pagelinks > span{
+    color: #6e6e6e;
+    margin-left: 5px;
+    //background-color: rgba(0,0,0,.05);
+}
+main .dataList span.pagelinks strong {
+    color: @fontColor;
+    //background-color: rgba(0,0,0,.05);
+}
+main .dataList .pagelinks .pc.first-disabled,
+main .dataList .pagelinks .pc.prev-disabled,
+main .dataList .pagelinks .pc.next-disabled,
+main .dataList .pagelinks .pc.last-disabled{
+    color: #dde6e9;
+    background-color: white; 
+}
+div[class*="-body-content"] div[class*="-body-header"] {
+    color: @fontColor;
+}
+main .jqplot-highlighter-tooltip, main .jqplot-canvasOverlay-tooltip {
+    color: #000;
+}
+main ::-webkit-input-placeholder{
+    color: @fontLightColor;
+}
+main :-moz-placeholder{
+    color: @fontLightColor;
+}
+main ::-moz-placeholder{
+    color: @fontLightColor;
+}
+main :-ms-input-placeholder{
+    color: @fontLightColor;
+}
+main .filter-cell select.emptyValue {
+    color: @fontLightColor !important;
+}
+main input:not([type]),
+main input[type=text],
+main input[type=password],
+main input[type=email],
+main input[type=url],
+main input[type=time],
+main input[type=date],
+main input[type=datetime],
+main input[type=datetime-local],
+main input[type=tel],
+main input[type=number],
+main input[type=search],
+main textarea,
+main select:not([class^=ui]){
+  color: @fontColor;
+}
+main input:not([type]):focus:not([readonly]),
+main input[type=text]:focus:not([readonly]),
+main input[type=password]:focus:not([readonly]),
+main input[type=email]:focus:not([readonly]),
+main input[type=url]:focus:not([readonly]),
+main input[type=time]:focus:not([readonly]),
+main input[type=date]:focus:not([readonly]),
+main input[type=datetime]:focus:not([readonly]),
+main input[type=datetime-local]:focus:not([readonly]),
+main input[type=tel]:focus:not([readonly]),
+main input[type=number]:focus:not([readonly]),
+main input[type=search]:focus:not([readonly]),
+main textarea:focus:not([readonly]),
+main select:focus:not([readonly]):not([class^=ui]),
+main input.focus,
+main .ql-container.ql-bubble.focus{
+  border: 1px solid @primary;
+  box-shadow: 0px 0px;
+}
+
+main select:not([class^="ui-"]):not([multiple]) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='@{escapedColor}' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/%3E%3C/svg%3E");
+}
+main input:-webkit-autofill, main textarea:-webkit-autofill, main select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: @fontColor !important;
+}
+main input:focus:-webkit-autofill, main textarea:focus:-webkit-autofill, main select:focus:-webkit-autofill {
+    -webkit-box-shadow: 0 1px 0 0 @primary, 0 0 0px 1000px #fff inset !important;
+}
+main #form-canvas .label {
+    color: @fontLabelColor;
+}
+main .subform-container.has-frame .subform-title {
+    background: #fff;
+}
+main .subform-container {
+    border: 2px solid #dde6e9;
+}
+main .chosen-container-multi .chosen-choices,
+main .chosen-container-single .chosen-single {
+    background-color: transparent;
+    background: transparent;
+    color: inherit;
+}
+main .chosen-container-single.chosen-with-drop .chosen-single {
+    color: #000;
+}
+main .chosen-container-multi.chosen-container-active .chosen-choices,
+main .chosen-container-active .chosen-single {
+    border: 1px solid @formElementColor;
+    box-shadow: 0 0 0 0.3rem fade(@formElementColor, 30%);
+}
+
+main .multiPagedForm.wizard .page-nav-panel ul,
+main .multiPagedForm.tab .page-nav-panel ul {
+    box-shadow: inset 0 -2px 0 0 screen(@primary, #555555);
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button,
+main .multiPagedForm.wizard .page-nav-panel .nav_item button,
+main .multiPagedForm.tab .page-nav-panel .nav_item.current button,
+main .multiPagedForm.tab .page-nav-panel .nav_item button {
+    color: screen(@primary, #555555);
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current button:disabled, main .multiPagedForm.tab .page-nav-panel .nav_item.current button:disabled, main .multiPagedForm.wizard .page-nav-panel .nav_item.current button, main .multiPagedForm.tab .page-nav-panel .nav_item.current button {
+    color: @darkPrimary;
+}
+main .multiPagedForm.wizard .page-nav-panel .nav_item.current:after, main .multiPagedForm.tab .page-nav-panel .nav_item.current:after {
+    background: @darkPrimary;
+}
+@media (max-width: 767px){
+    main .multiPagedForm.wizard .page-nav-panel .nav_item button, main .multiPagedForm.tab .page-nav-panel .nav_item button {
+        background: none;
+        border: screen(@primary, #555555) solid 1px;
+    }
+    main .multiPagedForm.wizard .page-nav-panel .nav_item.current, main .multiPagedForm.tab .page-nav-panel .nav_item.current {
+        border: 1px solid @darkPrimary;
+        margin-right: 0px;
+    }
+    main .multiPagedForm .page-container {
+        border: 1px solid transparent;
+    }
+}
+main .form-cell .grid thead tr, main .subform-cell .grid thead tr {
+    background: #999;
+    color: @defaultFontColor;
+}
+
+main .form-cell .grid table.tablesaw, main .subform-cell .grid table.tablesaw{
+    border-bottom: 1px solid #999;
+}
+main .grid-stack-item .grid-stack-item-header {
+    background: @headerColor;
+}
+main .grid-stack-item .grid-stack-item-header h4 {
+    color: @headerTextColor;
+}
+
+body #form-canvas .form-section-title span{
+    background: @headerColor;
+}
+
+main .grid-stack-item .grid-stack-item-content {
+    border-color: transparent;
+    border: 0px;
+    border-radius: 3px;
+}
+body.popupBody #main-body-header {
+    background: @darkPrimary;
+    color: @defaultFontColor;
+}
+
+body .form-cell .grid table.tablesaw, body .subform-cell .grid table.tablesaw{
+    border-bottom: 0px solid #999;
+}
+
+.mm-profile .user-link .toggled{
+    border-left: 0px solid #23b7e5;
+}
+
+body .form-cell .grid thead tr, body .subform-cell .grid thead tr {
+    background: #fff;
+    color: @fontLabelColor;
+    border-bottom: 1px solid #adadad;
+}
+
+.form-cell .tablesaw-stack tbody tr, .subform-cell .tablesaw-stack tbody tr {
+    border-bottom: 0;
+    border-top: 1px solid #d4d4d4;
+}
+
+.pq-grid span.pq-grid-header{
+    background: transparent !important;
+}
+
+.pq-grid td.pq-grid-col{
+    color: @fontColor;
+}
+
+.pq-grid div.pq-header-outer{
+    background: @primary !important;
+}
+
+.pq-grid-toolbar .ui-button {
+    background: @button;
+    border: 1px solid @button !important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.fc-day-header{
+    background: @primary;
+    color: @defaultFontColor;
+    font-size: 1.5rem;
+}
+
+body .dataList span.pagelinks strong, main .dataList span.pagelinks strong {
+    border: 1px solid @button !important;
+    background-color: @button !important;
+    color: white;
+    font-weight: 500;
+}
+
+body input:not([type]):focus:not([readonly]),
+body input[type=text]:focus:not([readonly]),
+body input[type=password]:focus:not([readonly]),
+body input[type=email]:focus:not([readonly]),
+body input[type=url]:focus:not([readonly]),
+body input[type=time]:focus:not([readonly]),
+body input[type=date]:focus:not([readonly]),
+body input[type=datetime]:focus:not([readonly]),
+body input[type=datetime-local]:focus:not([readonly]),
+body input[type=tel]:focus:not([readonly]),
+body input[type=number]:focus:not([readonly]),
+body input[type=search]:focus:not([readonly]),
+body textarea:focus:not([readonly]),
+body select:focus:not([readonly]):not([class^=ui]),
+body input.focus,
+body .editor-cell input:not([type]):focus:not([readonly]),
+body .editor-cell input[type=text]:focus:not([readonly]),
+body .editor-cell input[type=password]:focus:not([readonly]),
+body .editor-cell input[type=email]:focus:not([readonly]),
+body .editor-cell input[type=url]:focus:not([readonly]),
+body .editor-cell input[type=time]:focus:not([readonly]),
+body .editor-cell input[type=date]:focus:not([readonly]),
+body .editor-cell input[type=datetime]:focus:not([readonly]),
+body .editor-cell input[type=datetime-local]:focus:not([readonly]),
+body .editor-cell input[type=tel]:focus:not([readonly]),
+body .editor-cell input[type=number]:focus:not([readonly]),
+body .editor-cell input[type=search]:focus:not([readonly]),
+body .editor-cell textarea:focus:not([readonly]),
+body .editor-cell select:focus:not([readonly]):not([class^=ui]),
+body .editor-cell input.focus{
+  border: 1px solid @formElementColor;
+  box-shadow: 0 0 0 0.3rem fade(@formElementColor, 30%);
+}
+
+.user-menu{
+  background: @profileBackgroundImage;
+  background-size: 268px 118px;
+  background-repeat: no-repeat;
+}
+
+body.horizontal_menu #sidebar .nav>li:hover ul{
+    display:block  !important;
+}
+
+.dataList table a.waves-button {
+    color: @defaultFontColor;
+}
+
+body .select_checkbox label > [type="checkbox"]:hover + i:after,
+body label > input[type=checkbox]:hover + i:after{
+    border: 1px solid @formElementColor;
+}
+
+body .select_radio label > input[type="radio"]:hover + i:after,
+body label > input[type="radio"]:hover + i:after{
+    border: 1px solid @formElementColor;
+}
+
+body .select_radio label > input[type="radio"]:checked + i:after,
+body label > input[type="radio"]:checked + i:after {
+    background-color: @formElementColor;
+    border-color: @formElementColor;
+    box-shadow: 0 0 0 0.2rem transparent;
+}
+
+body .select_checkbox label > [type="checkbox"]:checked + i:after,
+body label > input[type=checkbox]:checked + i:after {
+    background-color: @formElementColor;
+    border: 1px solid @formElementColor;
+    box-shadow: 0 0 0 0.2rem transparent;
+}
+
+body .grid-action-add:after{
+    background-color: @formElementColor;
+    border: 1px solid @formElementColor;
+}
+
+body .chosen-container-multi .chosen-choices li.search-choice, body .chosen-container-single .chosen-single{
+    color: @fontColor;
+}
+
+.form-cell-value label, .subform-cell-value label{
+    color: @fontColor;
+}
+
+.badge{
+    background-color: @rowCountBackgroundColor;
+    border: 1px solid @rowCountBackgroundColor;
+}
+
+div.form-section-title{
+    background: @headerColor;
+    border-radius: 3px 3px 0 0;
+    color: @headerTextColor;
+}
+
+.fc-toolbar h2{
+    color:@fontLabelColor;
+}
+
+.fc button {
+    color: @buttonText;
+    background-color: @button;
+    text-shadow: none;
+    border: none;
+    box-shadow: none;
+}
+
+.fc button:hover {
+    background-color: darken(@button, 10%);
+    box-shadow: none;
+    border:none;
+    border-radius: 0px;
+}
+
+#page > footer{
+    color: @defaultFontColor;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color: @defaultFontColor;
+    border: 0;
+    color: @primary;
+}
+
+#content > main > div.datalist-body-content > h1, #content > main > div.datalist-body-content > h2, #content > main > div.datalist-body-content > h3{
+    background: @headerColor;
+    color: @headerTextColor;
+}
+
+main #form-canvas .form-section-title span{
+    color: @headerTextColor;
+}
+
+body.horizontal_menu #sidebar li ul li.active a .badge,
+body.horizontal_menu .main-menu.nav-tabs .active > a > .badge{
+    background: @menuFont;
+    color: @rowCountBackgroundColor;
+}
+
+body.horizontal_menu #sidebar .main-menu.nav-tabs > li.active > a > span > i{
+    color: @menuFont;
+}
+
+body.horizontal_menu.inline_menu #sidebar .main-menu.nav-tabs > li.active > a > span > i{
+    color: @primary;
+}
+
+.menu-link .default{
+    padding-left: 10px;
+}
+
+body.horizontal_menu #sidebar .main-menu.nav-tabs > li > a > span > i {
+    display: @ShowIcons;
+    font-size: 16px;
+}
+
+legend, main #form-canvas .subform-section-title span {
+    color: @fontLabelColor;
+}
+
+.activeFont {
+    color: @buttonText !important;
+    background-color: @button !important;
+}
