@@ -123,7 +123,7 @@
     },
     {
         name : 'fontControl',
-        label : '@@theme.universal.fontControl@@',
+        label : '@@theme.colorAdmin.fontControl@@',
         type : 'checkbox',
         options : [{
             value : 'true',
