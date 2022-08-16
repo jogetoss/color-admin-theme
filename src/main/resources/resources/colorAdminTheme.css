@@ -850,6 +850,7 @@ body#login #page > header.navbar a{
 #sidebar li ul>li>a, #sidebar li ul>li>.sidemenu_inner {
     padding: 8px 20px 8px 65px;
     display: block;
+    overflow: auto;
 }
 .rtl #sidebar li ul>li>a, .rtl #sidebar li ul>li>.sidemenu_inner {
     padding: 8px 65px 8px 20px;
@@ -1970,6 +1971,13 @@ body .form-cell .grid table.tablesaw, body .subform-cell .grid table.tablesaw {
 .badge{
     border-radius: 3px;
     font-weight: 500;
+    max-width: 20%;
+}
+
+.menu-container > li > a > span:nth-child(1) {
+    float: left;
+    max-width: 80%;
+    white-space: normal;
 }
 
 body .grid-stack-item .grid-stack-item-content {
