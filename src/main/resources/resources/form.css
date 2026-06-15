@@ -458,6 +458,10 @@ body .editor-cell textarea{
    ========================================================================== */
 body .select_radio label, body .select_checkbox label {
     margin-bottom: 0;
+    min-height: 28px;
+    line-height: 28px;
+    padding: 2px 0;
+    box-sizing: border-box;
 }
 body .select_radio label > input[type="radio"]:not(:checked),
 body .select_radio label > input[type="radio"]:checked,
@@ -506,6 +510,54 @@ body label > input[type="radio"]:disabled + i:after {
     font-weight: 400;
 }
 
+/* Checkbox/radio options: flex layout avoids float collapse overlap */
+body .form-container .form-cell-value:has(> label > [type="checkbox"]),
+body .form-container .subform-cell-value:has(> label > [type="checkbox"]),
+body .form-container .form-cell-value:has(> label > [type="radio"]),
+body .form-container .subform-cell-value:has(> label > [type="radio"]) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    align-content: flex-start !important;
+    min-height: auto !important;
+    overflow: visible !important;
+}
+
+body .form-container .form-cell-value:has(> label > [type="checkbox"]) > label,
+body .form-container .subform-cell-value:has(> label > [type="checkbox"]) > label,
+body .form-container .form-cell-value:has(> label > [type="radio"]) > label,
+body .form-container .subform-cell-value:has(> label > [type="radio"]) > label {
+    display: flex !important;
+    align-items: center !important;
+    float: none !important;
+    width: 50% !important;
+    min-height: 32px !important;
+    margin: 0 !important;
+    padding: 4px 12px 4px 0 !important;
+    box-sizing: border-box !important;
+}
+
+body .form-container .form-cell-value.fullWidth:has(> label > [type="checkbox"]) > label,
+body .form-container .subform-cell-value.fullWidth:has(> label > [type="checkbox"]) > label,
+body .form-container .form-cell-value.fullWidth:has(> label > [type="radio"]) > label,
+body .form-container .subform-cell-value.fullWidth:has(> label > [type="radio"]) > label {
+    width: auto !important;
+    min-width: 33% !important;
+}
+
+body .form-container .form-cell-value:after,
+body .form-container .subform-cell-value:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form-cell-value.fullWidth > label,
+.subform-cell-value.fullWidth > label {
+    width: auto;
+    float: none;
+}
+
 .form-cell, .subform-cell {
     position: relative;
     clear: left;
@@ -523,21 +575,34 @@ body label > [type="checkbox"]:checked {
     display:none;
 }
 
+body .select_checkbox label > [type="checkbox"] + i,
+body label > input[type=checkbox] + i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    flex-shrink: 0;
+}
+
 body .select_checkbox label > [type="checkbox"] + i:after,
 body label > input[type=checkbox] + i:after {
     font-family: Font Awesome\ 5 Free;
     font-weight: 900;
     content: "\f096";
     color: #dde6e9;
-    display: inline-block;
-    margin-right: 20px;
+    display: block;
     cursor: pointer;
     width: 20px;
     height: 20px;
-    vertical-align: middle;
+    line-height: 20px;
+    text-align: center;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: #fff
+    background: #fff;
+    box-sizing: border-box;
 }
 
 body .select_checkbox label > [type="checkbox"]:checked + i:after,
@@ -548,10 +613,9 @@ body label > input[type=checkbox]:checked + i:after {
     font-family: Font Awesome\ 5 Free;
     font-weight: 600;
     font-size: 12px;
+    line-height: 18px;
     border: 1px solid #5d9cec;
     border-radius: 3px;
-    padding-left: 3px;
-    padding-top: 3px;
     box-shadow: 0 0 0 0.2rem rgba(52,143,226,.25);
 }
 

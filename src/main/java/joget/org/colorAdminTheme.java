@@ -51,7 +51,6 @@ public class colorAdminTheme extends UniversalTheme{
         String jsCssLink = "";
         jsCssLink += "<link href=\"" + data.get("context_path") + "/wro/" + getPathName() + ".preload.min.css" + "\" rel=\"stylesheet\" />\n";
         jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/colorAdminTheme.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
-        jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/form.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
         jsCssLink += "<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n";
         jsCssLink += "<link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap\" rel=\"stylesheet\">";
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/js/fontawesome5/fonts/fontawesome-webfont.woff2?v=4.6.1\" as=\"font\" crossorigin />\n";
@@ -68,6 +67,7 @@ public class colorAdminTheme extends UniversalTheme{
         } 
         jsCssLink += "<script>var _enableResponsiveTable = true;</script>\n";
         jsCssLink += getInternalJsCssLib(data);
+        jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/form.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
             
         return jsCssLink;
     }
