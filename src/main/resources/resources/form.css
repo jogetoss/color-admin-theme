@@ -1405,6 +1405,36 @@ body .grid-action-header, body td.grid-action-cell {
     font-weight: bold;
 }
 
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    display: none !important;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    font-size: 0 !important;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev::after,
+.ui-datepicker .ui-datepicker-next::after {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    font-size: 14px !important;
+    line-height: 1.8em !important;
+    display: block !important;
+    text-align: center !important;
+    font-style: normal !important;
+}
+
+.ui-datepicker .ui-datepicker-prev::after {
+    content: "\f053" !important;
+}
+
+.ui-datepicker .ui-datepicker-next::after {
+    content: "\f054" !important;
+}
+
 .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
     width: 45%;
 }
