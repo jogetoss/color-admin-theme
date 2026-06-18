@@ -631,8 +631,14 @@ body label > input[type="radio"]:checked + i:after {
 
 body .select_checkbox label > [type="checkbox"]:checked + i:after,
 body label > input[type=checkbox]:checked + i:after {
-    background-color: @formElementColor;
-    border: 1px solid @formElementColor;
+    content: "\f00c" !important;
+    font-family: Font Awesome\ 5 Free !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    color: #fff !important;
+    background-color: @formElementColor !important;
+    border: 1px solid @formElementColor !important;
     box-shadow: 0 0 0 0.2rem transparent;
 }
 

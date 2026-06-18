@@ -599,34 +599,29 @@ body label > input[type=checkbox] + i {
 
 body .select_checkbox label > [type="checkbox"] + i:after,
 body label > input[type=checkbox] + i:after {
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 900;
-    content: "\f096";
-    color: #dde6e9;
-    display: block;
+    content: "" !important;
+    font: 0/0 a !important;
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 0 !important;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: #fff;
+    background: #fff !important;
     box-sizing: border-box;
 }
 
 body .select_checkbox label > [type="checkbox"]:checked + i:after,
 body label > input[type=checkbox]:checked + i:after {
-    content: "\f00c";
-    background-color: #5d9cec;
-    color: #fff;
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18px;
-    border: 1px solid #5d9cec;
+    content: "\f00c" !important;
+    font-family: Font Awesome\ 5 Free !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    text-align: center;
+    color: #fff !important;
     border-radius: 3px;
-    box-shadow: 0 0 0 0.2rem rgba(52,143,226,.25);
 }
 
 body .select_checkbox label > [type="checkbox"]:disabled + i:after,
