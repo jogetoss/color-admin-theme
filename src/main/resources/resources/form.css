@@ -470,30 +470,40 @@ body label > [type="radio"]:checked {
     display:none;
 }
 
+body .select_radio label > input[type="radio"] + i,
+body label > input[type="radio"] + i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    flex-shrink: 0;
+}
+
 body .select_radio label > input[type="radio"] + i:after,
 body label > input[type="radio"] + i:after {
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 900;
-    content: "\f096";
-    color: #fff;
-    display: inline-block;
-    margin-right: 20px;
+    content: "" !important;
+    font: 0/0 a !important;
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 0 !important;
     cursor: pointer;
-    width: 21px;
-    height: 21px;
-    vertical-align: middle;
     border: 1px solid #ccc;
-    border-radius: 500px;
-    
+    border-radius: 50%;
+    background: #fff;
+    box-sizing: border-box;
 }
 
 body .select_radio label > input[type="radio"]:checked + i:after,
 body label > input[type="radio"]:checked + i:after {
-    font:normal normal normal 14px/1 FontAwesome;
-    content: "\f111";
-    font-size: 10px;
-    padding-top: 5px;
-    padding-left: 5px;
+    content: "" !important;
+    font: 0/0 a !important;
+    background-color: #fff !important;
+    border-width: 2px !important;
+    border-style: solid !important;
 }
 
 body .select_radio label > input[type="radio"]:disabled + i:after,
