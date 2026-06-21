@@ -58,8 +58,6 @@ public class colorAdminTheme extends UniversalTheme{
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/js/fontawesome5/webfonts/fa-solid-900.woff2\" as=\"font\" crossorigin />\n";
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/universal/lib/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0\" as=\"font\" crossorigin />\n";
         jsCssLink += "<script>loadCSS(\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.css" + "\")</script>\n";
-        
-        jsCssLink += "<style>" + generateLessCss() + "</style>";
 
         jsCssLink += "<script src=\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.js\" async></script>\n";
         if (enableResponsiveSwitch()) {
@@ -68,6 +66,7 @@ public class colorAdminTheme extends UniversalTheme{
         jsCssLink += "<script>var _enableResponsiveTable = true;</script>\n";
         jsCssLink += getInternalJsCssLib(data);
         jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/form.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
+        jsCssLink += "<style>" + generateLessCss() + "</style>\n";
             
         return jsCssLink;
     }
