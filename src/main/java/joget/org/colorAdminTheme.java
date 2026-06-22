@@ -16,7 +16,7 @@ public class colorAdminTheme extends UniversalTheme{
 
     @Override
     public String getVersion() {
-        return "7.0.4";
+        return "7.0.5";
     }
 
     @Override
@@ -51,7 +51,6 @@ public class colorAdminTheme extends UniversalTheme{
         String jsCssLink = "";
         jsCssLink += "<link href=\"" + data.get("context_path") + "/wro/" + getPathName() + ".preload.min.css" + "\" rel=\"stylesheet\" />\n";
         jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/colorAdminTheme.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
-        jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/form.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
         jsCssLink += "<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n";
         jsCssLink += "<link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap\" rel=\"stylesheet\">";
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/js/fontawesome5/fonts/fontawesome-webfont.woff2?v=4.6.1\" as=\"font\" crossorigin />\n";
@@ -59,8 +58,6 @@ public class colorAdminTheme extends UniversalTheme{
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/js/fontawesome5/webfonts/fa-solid-900.woff2\" as=\"font\" crossorigin />\n";
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/universal/lib/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0\" as=\"font\" crossorigin />\n";
         jsCssLink += "<script>loadCSS(\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.css" + "\")</script>\n";
-        
-        jsCssLink += "<style>" + generateLessCss() + "</style>";
 
         jsCssLink += "<script src=\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.js\" async></script>\n";
         if (enableResponsiveSwitch()) {
@@ -68,6 +65,9 @@ public class colorAdminTheme extends UniversalTheme{
         } 
         jsCssLink += "<script>var _enableResponsiveTable = true;</script>\n";
         jsCssLink += getInternalJsCssLib(data);
+        jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/form.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
+        jsCssLink += "<style>" + generateLessCss() + "</style>\n";
+        jsCssLink += "<script>(function(){function loadGravatars(){var imgs=document.querySelectorAll('img.gravatar[data-lazysrc]');for(var i=0;i<imgs.length;i++){var img=imgs[i];var url=img.getAttribute('data-lazysrc');if(!url)continue;if(url.indexOf('//')===0)url='https:'+url;img.style.display='';img.onerror=function(){this.onerror=null;this.src='https://www.gravatar.com/avatar/?d=identicon&s=80';};img.setAttribute('src',url);}}function init(){loadGravatars();var $=window.jQuery;if($){$(window).on('load',loadGravatars);$(document).on('page_loaded',loadGravatars);}else setTimeout(init,50);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script>\n";
             
         return jsCssLink;
     }

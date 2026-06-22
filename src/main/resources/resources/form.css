@@ -458,6 +458,10 @@ body .editor-cell textarea{
    ========================================================================== */
 body .select_radio label, body .select_checkbox label {
     margin-bottom: 0;
+    min-height: 28px;
+    line-height: 28px;
+    padding: 2px 0;
+    box-sizing: border-box;
 }
 body .select_radio label > input[type="radio"]:not(:checked),
 body .select_radio label > input[type="radio"]:checked,
@@ -466,30 +470,40 @@ body label > [type="radio"]:checked {
     display:none;
 }
 
+body .select_radio label > input[type="radio"] + i,
+body label > input[type="radio"] + i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    flex-shrink: 0;
+}
+
 body .select_radio label > input[type="radio"] + i:after,
 body label > input[type="radio"] + i:after {
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 900;
-    content: "\f096";
-    color: #fff;
-    display: inline-block;
-    margin-right: 20px;
+    content: "" !important;
+    font: 0/0 a !important;
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 0 !important;
     cursor: pointer;
-    width: 21px;
-    height: 21px;
-    vertical-align: middle;
     border: 1px solid #ccc;
-    border-radius: 500px;
-    
+    border-radius: 50%;
+    background: #fff;
+    box-sizing: border-box;
 }
 
 body .select_radio label > input[type="radio"]:checked + i:after,
 body label > input[type="radio"]:checked + i:after {
-    font:normal normal normal 14px/1 FontAwesome;
-    content: "\f111";
-    font-size: 10px;
-    padding-top: 5px;
-    padding-left: 5px;
+    content: "" !important;
+    font: 0/0 a !important;
+    background-color: #fff !important;
+    border-width: 2px !important;
+    border-style: solid !important;
 }
 
 body .select_radio label > input[type="radio"]:disabled + i:after,
@@ -504,6 +518,54 @@ body label > input[type="radio"]:disabled + i:after {
     width: 50%;
     outline: 0px;
     font-weight: 400;
+}
+
+/* Checkbox/radio options: flex layout avoids float collapse overlap */
+body .form-container .form-cell-value:has(> label > [type="checkbox"]),
+body .form-container .subform-cell-value:has(> label > [type="checkbox"]),
+body .form-container .form-cell-value:has(> label > [type="radio"]),
+body .form-container .subform-cell-value:has(> label > [type="radio"]) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    align-content: flex-start !important;
+    min-height: auto !important;
+    overflow: visible !important;
+}
+
+body .form-container .form-cell-value:has(> label > [type="checkbox"]) > label,
+body .form-container .subform-cell-value:has(> label > [type="checkbox"]) > label,
+body .form-container .form-cell-value:has(> label > [type="radio"]) > label,
+body .form-container .subform-cell-value:has(> label > [type="radio"]) > label {
+    display: flex !important;
+    align-items: center !important;
+    float: none !important;
+    width: 50% !important;
+    min-height: 32px !important;
+    margin: 0 !important;
+    padding: 4px 12px 4px 0 !important;
+    box-sizing: border-box !important;
+}
+
+body .form-container .form-cell-value.fullWidth:has(> label > [type="checkbox"]) > label,
+body .form-container .subform-cell-value.fullWidth:has(> label > [type="checkbox"]) > label,
+body .form-container .form-cell-value.fullWidth:has(> label > [type="radio"]) > label,
+body .form-container .subform-cell-value.fullWidth:has(> label > [type="radio"]) > label {
+    width: auto !important;
+    min-width: 33% !important;
+}
+
+body .form-container .form-cell-value:after,
+body .form-container .subform-cell-value:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form-cell-value.fullWidth > label,
+.subform-cell-value.fullWidth > label {
+    width: auto;
+    float: none;
 }
 
 .form-cell, .subform-cell {
@@ -523,36 +585,43 @@ body label > [type="checkbox"]:checked {
     display:none;
 }
 
-body .select_checkbox label > [type="checkbox"] + i:after,
-body label > input[type=checkbox] + i:after {
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 900;
-    content: "\f096";
-    color: #dde6e9;
+body .select_checkbox label > [type="checkbox"] + i,
+body label > input[type=checkbox] + i {
     display: inline-block;
-    margin-right: 20px;
-    cursor: pointer;
     width: 20px;
     height: 20px;
+    margin-right: 8px;
     vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    flex-shrink: 0;
+}
+
+body .select_checkbox label > [type="checkbox"] + i:after,
+body label > input[type=checkbox] + i:after {
+    content: "" !important;
+    font: 0/0 a !important;
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 0 !important;
+    cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: #fff
+    background: #fff !important;
+    box-sizing: border-box;
 }
 
 body .select_checkbox label > [type="checkbox"]:checked + i:after,
 body label > input[type=checkbox]:checked + i:after {
-    content: "\f00c";
-    background-color: #5d9cec;
-    color: #fff;
-    font-family: Font Awesome\ 5 Free;
-    font-weight: 600;
-    font-size: 12px;
-    border: 1px solid #5d9cec;
+    content: "\f00c" !important;
+    font-family: Font Awesome\ 5 Free !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    text-align: center;
+    color: #fff !important;
     border-radius: 3px;
-    padding-left: 3px;
-    padding-top: 3px;
-    box-shadow: 0 0 0 0.2rem rgba(52,143,226,.25);
 }
 
 body .select_checkbox label > [type="checkbox"]:disabled + i:after,
@@ -1334,6 +1403,36 @@ body .grid-action-header, body td.grid-action-cell {
     background: #fff;
     color: #656565;
     font-weight: bold;
+}
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    display: none !important;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    font-size: 0 !important;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev::after,
+.ui-datepicker .ui-datepicker-next::after {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    font-size: 14px !important;
+    line-height: 1.8em !important;
+    display: block !important;
+    text-align: center !important;
+    font-style: normal !important;
+}
+
+.ui-datepicker .ui-datepicker-prev::after {
+    content: "\f053" !important;
+}
+
+.ui-datepicker .ui-datepicker-next::after {
+    content: "\f054" !important;
 }
 
 .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
