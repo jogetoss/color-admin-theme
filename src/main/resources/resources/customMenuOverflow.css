@@ -1,0 +1,132 @@
+/* Horizontal menu: single row + custom hamburger overflow */
+body.horizontal_menu #category-container.main-menu {
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+}
+
+body.horizontal_menu #menu-more,
+body.horizontal_menu #moreSubMenu {
+    display: none !important;
+}
+
+body.horizontal_menu #custom-menu-more {
+    position: relative !important;
+    display: list-item !important;
+    vertical-align: top;
+}
+
+body.horizontal_menu #custom-menu-more > a {
+    cursor: pointer;
+    display: inline-block !important;
+    padding: 10px 14px !important;
+    line-height: 1;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+body.horizontal_menu #custom-overflow-menu {
+    display: none;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    min-width: 260px;
+    max-width: 320px;
+    max-height: 70vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 10000;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+body.horizontal_menu #custom-menu-more.open #custom-overflow-menu {
+    display: block !important;
+}
+
+/* Vertical stack inside overflow panel */
+body.horizontal_menu #custom-overflow-menu > li.category {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body.horizontal_menu #custom-overflow-menu > li.category > a {
+    white-space: normal !important;
+    word-wrap: break-word;
+    display: block !important;
+    position: relative;
+    padding: 10px 36px 10px 16px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Disable horizontal flyout submenus inside overflow panel */
+body.horizontal_menu #sidebar #custom-overflow-menu ul.menu-container,
+body.horizontal_menu #sidebar #custom-overflow-menu li ul {
+    position: static !important;
+    display: none !important;
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    background: transparent !important;
+}
+
+body.horizontal_menu #sidebar #custom-overflow-menu > li.category.open-submenu > ul.menu-container,
+body.horizontal_menu #sidebar #custom-overflow-menu > li.category.open-submenu > ul {
+    display: block !important;
+}
+
+body.horizontal_menu #sidebar #custom-overflow-menu li:hover > ul,
+body.horizontal_menu #sidebar #custom-overflow-menu li:hover > ul.menu-container {
+    display: none !important;
+}
+
+body.horizontal_menu #sidebar #custom-overflow-menu > li.category.open-submenu:hover > ul.menu-container,
+body.horizontal_menu #sidebar #custom-overflow-menu > li.category.open-submenu:hover > ul {
+    display: block !important;
+}
+
+body.horizontal_menu #custom-overflow-menu .menu-container > li,
+body.horizontal_menu #custom-overflow-menu .menu-container > li > a {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+}
+
+body.horizontal_menu #custom-overflow-menu .menu-container > li > a {
+    padding: 8px 16px 8px 28px !important;
+    font-size: 13px;
+    white-space: normal !important;
+}
+
+body.horizontal_menu #custom-overflow-menu .menu-container > li > a > span:nth-child(1) {
+    float: none !important;
+    max-width: none !important;
+}
+
+body.horizontal_menu #custom-overflow-menu > li.category > a.dropdown:before,
+body.horizontal_menu #custom-overflow-menu > li.category > a.dropdown:after {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    opacity: 0.6;
+    margin: 0 !important;
+}
+
+body.horizontal_menu #custom-overflow-menu > li.category.open-submenu > a.dropdown:after {
+    transform: translateY(-50%) rotate(90deg) !important;
+}

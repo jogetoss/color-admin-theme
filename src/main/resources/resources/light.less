@@ -835,3 +835,42 @@ legend, main #form-canvas .subform-section-title span {
     opacity: 0 !important;
     background: transparent !important;
 }
+
+#custom-overflow-menu {
+    background: @menuBackgroundColor;
+    border: 1px solid fade(@menuFont, 25%);
+}
+
+#custom-overflow-menu > li.category > a {
+    color: fade(@menuFont, 90%);
+}
+
+#custom-overflow-menu > li.category > a:hover,
+#custom-overflow-menu > li.category > a:focus {
+    color: @menuFont;
+    background: fade(@menuFont, 10%);
+}
+
+#custom-overflow-menu .menu-container > li > a {
+    color: fade(@menuFont, 80%);
+}
+
+#custom-overflow-menu .menu-container > li > a:hover,
+#custom-overflow-menu .menu-container > li > a:focus {
+    color: @menuFont;
+    background: fade(@menuFont, 8%);
+}
+
+#custom-menu-more > a {
+    color: fade(@menuFont, 90%);
+}
+
+body.horizontal_menu.inline_menu #custom-overflow-menu {
+    background: @primary;
+    border-color: fade(@menuFont, 20%);
+}
+
+body.horizontal_menu.inline_menu #custom-overflow-menu > li.category > a,
+body.horizontal_menu.inline_menu #custom-overflow-menu .menu-container > li > a {
+    color: fade(@menuFont, 90%);
+}
