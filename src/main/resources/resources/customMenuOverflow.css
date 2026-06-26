@@ -1,4 +1,22 @@
 /* Horizontal menu: single row + custom hamburger overflow */
+
+/* Hide menu until hamburger layout is ready (prevents overflow flash on load/navigation) */
+body.horizontal_menu:not(.custom-menu-ready) #sidebar {
+    overflow: hidden !important;
+}
+
+body.horizontal_menu:not(.custom-menu-ready) #category-container {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+body.horizontal_menu.custom-menu-ready #category-container {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
 body.horizontal_menu #category-container.main-menu {
     flex-wrap: nowrap !important;
     white-space: nowrap !important;
