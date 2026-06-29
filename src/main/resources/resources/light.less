@@ -60,20 +60,80 @@ header.navbar a {
 header.navbar .header-nav .nav>li>a .badge{
     background: #E91B0C !important;
     border-color: #E91B0C;
-    border-radius: 50%;
+    border-radius: 10px;
+}
+header.navbar .dropdown-menu {
+    background: #fff;
+    border-color: fade(#000, 8%);
 }
 header.navbar .dropdown-menu a{ 
-    color: #000;
+    color: @fontLabelColor;
+}
+header.navbar .header-nav .dropdown-menu > li:not(.dropdown-menu-title):not(.task) > a:hover,
+header.navbar .header-nav .dropdown-menu > li:not(.dropdown-menu-title):not(.task) > a:focus {
+    background: fade(@accent, 10%);
+    color: darken(@accent, 8%);
+}
+header.navbar .header-nav .dropdown-menu > li:not(.dropdown-menu-title):not(.task) > a:hover i,
+header.navbar .header-nav .dropdown-menu > li:not(.dropdown-menu-title):not(.task) > a:focus i {
+    opacity: 1;
+    color: @accent;
 }
 header.navbar .dropdown-menu .dropdown-menu-sub-footer {
-    color: #828282;
+    color: @accent;
+}
+header.navbar .dropdown-menu .dropdown-menu-sub-footer:hover {
+    color: darken(@accent, 8%);
+    background: fade(@accent, 8%);
 }
 header.navbar .dropdown-menu a span.message, header.navbar .dropdown-menu a span.time {
-    color: #4C4C4C;
+    color: @fontLightColor;
+}
+header.navbar .dropdown-menu li.task > a:hover {
+    background: fade(@accent, 6%);
+}
+header.navbar .dropdown-menu li.task > a:hover .header {
+    color: darken(@accent, 5%);
 }
 li.dropdown-menu-title {
-    border-bottom: 1px solid #F0F0F0;
-    color: #4C4C4C;
+    border-bottom: 1px solid fade(#000, 6%);
+    color: @fontLabelColor;
+}
+header.navbar .dropdown-menu .dropdown-menu-title a.refresh:hover {
+    background: fade(@accent, 10%);
+    color: @accent;
+}
+
+/* Header nav — theme-aware icon & profile chip */
+header.navbar .header-nav .nav > li > a.btn {
+    color: @defaultFontColor !important;
+}
+header.navbar .header-nav .nav > li > a.btn:hover,
+header.navbar .header-nav .nav > li > a.btn:focus,
+header.navbar .header-nav .nav > li.open > a.btn {
+    background: fade(@defaultFontColor, 10%) !important;
+    color: @defaultFontColor !important;
+}
+header.navbar .header-nav .nav > li.user-link > a.btn.dropdown-toggle {
+    background: fade(@defaultFontColor, 12%) !important;
+    border-color: fade(@defaultFontColor, 20%) !important;
+    color: @defaultFontColor !important;
+}
+header.navbar .header-nav .nav > li.user-link > a.btn.dropdown-toggle:hover,
+header.navbar .header-nav .nav > li.user-link.open > a.btn.dropdown-toggle {
+    background: fade(@defaultFontColor, 18%) !important;
+    border-color: fade(@defaultFontColor, 25%) !important;
+}
+header.navbar .header-nav .nav > li > a.btn.waves-button,
+header.navbar .header-nav .nav > li > a.btn.waves-input-wrapper {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+header.navbar .header-nav .nav > li.user-link > a.btn.waves-button,
+header.navbar .header-nav .nav > li.user-link > a.btn.waves-input-wrapper {
+    background-color: fade(@defaultFontColor, 12%) !important;
+    border: 1px solid fade(@defaultFontColor, 20%) !important;
 }
 #sidebar {
     background: @menuBackgroundColor;
@@ -233,7 +293,8 @@ body.horizontal_menu #sidebar a,
         color: @primary;
     }
     body.horizontal_menu.inline_menu header.navbar .header-nav .nav>li.user-link img {
-        border: 2px solid fade(@defaultFontColor, 13%);
+        border: 2px solid fade(@defaultFontColor, 20%);
+        box-shadow: 0 1px 3px fade(#000, 15%);
     }
     body.horizontal_menu #sidebar a,
     body.horizontal_menu .main-menu.nav-tabs>li.active>a, body.horizontal_menu .main-menu.nav-tabs>li.active>a:hover,
@@ -834,4 +895,78 @@ legend, main #form-canvas .subform-section-title span {
     display: none !important;
     opacity: 0 !important;
     background: transparent !important;
+}
+
+#custom-overflow-menu {
+    background: @menuBackgroundColor;
+    border: 1px solid fade(@menuFont, 25%);
+}
+
+#custom-overflow-menu > li.category > a {
+    color: fade(@menuFont, 90%);
+}
+
+#custom-overflow-menu > li.category > a:hover,
+#custom-overflow-menu > li.category > a:focus {
+    color: @menuFont;
+    background: fade(@menuFont, 10%);
+}
+
+#custom-overflow-menu .menu-container > li > a {
+    color: fade(@menuFont, 80%);
+}
+
+#custom-overflow-menu .menu-container > li > a:hover,
+#custom-overflow-menu .menu-container > li > a:focus {
+    color: @menuFont;
+    background: fade(@menuFont, 8%);
+}
+
+#custom-menu-more > a {
+    color: fade(@menuFont, 90%);
+}
+
+/* Keep profile/notification dropdowns above the horizontal menu bar */
+body.horizontal_menu header.navbar {
+    overflow: visible !important;
+}
+
+body.horizontal_menu header.navbar .header-nav {
+    position: relative;
+    z-index: 1100;
+}
+
+body.horizontal_menu header.navbar .header-nav .dropdown-menu {
+    z-index: 1100;
+}
+
+body.horizontal_menu.inline_menu #sidebar {
+    z-index: 1;
+}
+
+body.horizontal_menu.inline_menu #custom-overflow-menu {
+    background: @primary;
+    border-color: fade(@menuFont, 20%);
+}
+
+body.horizontal_menu.inline_menu #custom-overflow-menu > li.category > a,
+body.horizontal_menu.inline_menu #custom-overflow-menu .menu-container > li > a {
+    color: fade(@menuFont, 90%);
+}
+
+/* Menu hidden until overflow layout is applied (loads after theme CSS) */
+body.horizontal_menu:not(.custom-menu-ready) #sidebar {
+    overflow: hidden !important;
+}
+
+body.horizontal_menu:not(.custom-menu-ready) #category-container {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+body.horizontal_menu.custom-menu-ready #category-container {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
 }
