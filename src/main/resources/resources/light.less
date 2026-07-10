@@ -551,6 +551,15 @@ main .multiPagedForm.wizard .page-nav-panel .nav_item.current:after, main .multi
         border: 1px solid transparent;
     }
 }
+
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button:disabled,
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button:disabled,
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button[disabled],
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button[disabled] {
+    color: fade(@buttonText, 85%) !important;
+    background-color: fade(@button, 55%) !important;
+    border: 1px solid fade(@button, 55%) !important;
+}
 main .form-cell .grid thead tr, main .subform-cell .grid thead tr {
     background: #999;
     color: @defaultFontColor;
