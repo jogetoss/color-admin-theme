@@ -2504,21 +2504,97 @@ body:not(#login).embeded #content > main > div.datalist-body-content > div{
     padding: 0px;
 }
 
-.adjustfontSize{
+/* Font size accessibility control — scoped to main content only */
+#content .adjustfontSize {
     position: relative;
-    height: 50px;
-    display: block;
-    padding: 10px !important;
-    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    min-height: 0;
+    margin: 0 0 10px;
+    padding: 6px 0 10px !important;
+    box-sizing: border-box;
 }
-.buttonFontSize {
-    font-size: 20px !important;
+
+#content .adjustfontSize > div:first-child {
+    float: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 100%;
+}
+
+#content .adjustfontSize > div[style*="clear"] {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#content .adjustfontSize > div:first-child > span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+#content .adjustfontSize .btn-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: middle;
+}
+
+#content .buttonFontSize {
+    font-size: 16px !important;
+    line-height: 1 !important;
     color: #6c757d !important;
     background-color: #ffffff !important;
-    margin-left: 1px !important;
-    padding: 3px 9px;
-    outline:none !important;
-    border: none !important;
+    margin: 0 !important;
+    padding: 6px 10px !important;
+    outline: none !important;
+    border: 1px solid #cfd8dc !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+#content .buttonFontSize:hover,
+#content .buttonFontSize:focus {
+    background-color: #f5f5f5 !important;
+    border-color: #b0bec5 !important;
+    color: #495057 !important;
+}
+
+#content .activeFont,
+#content .buttonFontSize.activeFont {
+    color: #ffffff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+body.horizontal_menu #content .adjustfontSize {
+    margin: 0 0 6px;
+    padding: 8px 0 10px !important;
+}
+
+@media screen and (max-width: 767px) {
+    #content .adjustfontSize {
+        justify-content: center;
+        padding: 8px 0 !important;
+        margin-bottom: 8px;
+    }
+
+    #content .adjustfontSize > div:first-child {
+        justify-content: center;
+        width: 100%;
+    }
 }
 .footable-buttons > button{
     margin-bottom: 5px;
