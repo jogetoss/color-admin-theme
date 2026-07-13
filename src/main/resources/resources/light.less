@@ -772,9 +772,15 @@ div.form-section-title{
     color: @primary;
 }
 
-#content > main > div.datalist-body-content > h1, #content > main > div.datalist-body-content > h2, #content > main > div.datalist-body-content > h3{
-    background: @headerColor;
-    color: @headerTextColor;
+/* Datalist heading uses button colors so it matches action buttons / expected theme bar */
+.datalist-body-content h1,
+.datalist-body-content h2,
+.datalist-body-content h3,
+#content main .datalist-body-content > h1,
+#content main .datalist-body-content > h2,
+#content main .datalist-body-content > h3 {
+    background-color: @button !important;
+    color: @buttonText !important;
 }
 
 main #form-canvas .form-section-title span{

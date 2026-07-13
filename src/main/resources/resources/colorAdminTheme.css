@@ -1964,10 +1964,10 @@ body #form-canvas #section-actions{
 }
 
 
-/* Lists */
-body:not(#login) #content > main > .datalist-body-content:not(.quickEdit) {
+/* Lists — match DX9 wrapper (main > .main-body-content > .datalist-body-content) */
+body:not(#login) #content main .datalist-body-content:not(.quickEdit) {
     padding: 0px;
-    margin: 15px 0px;
+    margin: 30px 0 15px;
     border: 0px;
     border-radius: 3px;
     background: white !important;
@@ -2237,9 +2237,9 @@ body .grid-action-edit:hover, body .grid-action-delete:hover, body .grid-action-
 }
 
 .datalist-body-content{
-    border-left: 1px solid #cfd8dc;
-    border-right: 1px solid #cfd8dc;
-    border-top: 3px solid #cfd8dc;
+    border: 0px;
+    border-radius: 3px;
+    margin-top: 30px;
 }
 
 span.pagelinks > a:nth-child(1){
@@ -2444,26 +2444,35 @@ main .dataList .exportlinks span.export {
     background-color: #727272; 
 }
 
-#content > main > div.datalist-body-content > h1,
-#content > main > div.datalist-body-content > h2,
-#content > main > div.datalist-body-content > h3{
+/* Datalist heading — blue bar matching theme buttons (see light.less for colors) */
+.datalist-body-content h1,
+.datalist-body-content h2,
+.datalist-body-content h3,
+#content main .datalist-body-content > h1,
+#content main .datalist-body-content > h2,
+#content main .datalist-body-content > h3 {
     font-size: 20px;
     margin: 0;
     border-radius: 3px 3px 0 0;
     padding: 15px 10px;
 }
 
-#content > main > div.datalist-body-content > h4,
-#content > main > div.datalist-body-content > h5,
-#content > main > div.datalist-body-content > h6{
+.datalist-body-content h4,
+.datalist-body-content h5,
+.datalist-body-content h6,
+#content main .datalist-body-content > h4,
+#content main .datalist-body-content > h5,
+#content main .datalist-body-content > h6 {
     padding: 15px 10px;
 }
 
-#content > main > div.datalist-body-content > p{
+.datalist-body-content > p,
+#content main .datalist-body-content > p {
     padding: 0px 10px;
 }
 
-#content > main > div.datalist-body-content > div.form-cell{
+.datalist-body-content > div.form-cell,
+#content main .datalist-body-content > div.form-cell {
     padding: 0px 10px;
 }
 
@@ -2477,7 +2486,8 @@ div.exportlinks > a{
     padding: 0px 5px;
 }
 
-body:not(#login).embeded #content > main > div.datalist-body-content > h1{
+body:not(#login).embeded #content main .datalist-body-content > h1,
+body:not(#login).embeded #content main .datalist-body-content h1 {
     font-size: 28px;
     margin: 0;
     color: black;
@@ -2485,7 +2495,7 @@ body:not(#login).embeded #content > main > div.datalist-body-content > h1{
     border-radius: 3px 3px 0 0;
     padding: 0px;
 }
-body:not(#login).embeded #content > main > div.datalist-body-content > div{
+body:not(#login).embeded #content main .datalist-body-content > div {
     padding: 0px;
 }
 
