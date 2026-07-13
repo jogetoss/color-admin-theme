@@ -59,7 +59,9 @@ public class colorAdminTheme extends UniversalTheme{
         jsCssLink += "<link rel=\"preload\" href=\"" + data.get("context_path") + "/universal/lib/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0\" as=\"font\" crossorigin />\n";
         jsCssLink += "<script>loadCSS(\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.css" + "\")</script>\n";
 
-        jsCssLink += "<script src=\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.js\" async></script>\n";
+        // Use defer (not async) so progressive.min.js registers window.load handlers
+        // before the load event fires — async can miss loadInbox and leave the badge at 0.
+        jsCssLink += "<script src=\"" + data.get("context_path") + "/wro/" + getPathName() + ".min.js\" defer></script>\n";
         if (enableResponsiveSwitch()) {
             jsCssLink += "<script src=\"" + data.get("context_path") + "/" + getPathName() +"/lib/responsive-switch.min.js\" defer></script>\n";
         } 
@@ -69,7 +71,7 @@ public class colorAdminTheme extends UniversalTheme{
         jsCssLink += "<style>body.horizontal_menu:not(.custom-menu-ready) #sidebar{overflow:hidden!important}body.horizontal_menu:not(.custom-menu-ready) #category-container{visibility:hidden!important;opacity:0!important;pointer-events:none!important}</style>\n";
         jsCssLink += "<link href=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/customMenuOverflow.css\" rel=\"stylesheet\" type=\"text/css\"/>\n";
         jsCssLink += "<style>" + generateLessCss() + "</style>\n";
-        jsCssLink += "<script>(function(){function loadGravatars(){var imgs=document.querySelectorAll('img.gravatar[data-lazysrc]');for(var i=0;i<imgs.length;i++){var img=imgs[i];var url=img.getAttribute('data-lazysrc');if(!url)continue;if(url.indexOf('//')===0)url='https:'+url;img.style.display='';img.onerror=function(){this.onerror=null;this.src='https://www.gravatar.com/avatar/?d=identicon&s=80';};img.setAttribute('src',url);}}function init(){loadGravatars();var $=window.jQuery;if($){$(window).on('load',loadGravatars);$(document).on('page_loaded',loadGravatars);}else setTimeout(init,50);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script>\n";
+        jsCssLink += "<script>(function(){function loadGravatars(){var imgs=document.querySelectorAll('img.gravatar[data-lazysrc]');for(var i=0;i<imgs.length;i++){var img=imgs[i];var url=img.getAttribute('data-lazysrc');if(!url)continue;if(url.indexOf('//')===0)url='https:'+url;img.style.display='';img.onerror=function(){this.onerror=null;this.src='https://www.gravatar.com/avatar/?d=identicon&s=80';};img.setAttribute('src',url);}}function refreshInboxCount(){if(typeof window.loadInboxData==='function'){window.loadInboxData();}}function init(){loadGravatars();var $=window.jQuery;if($){$(window).on('load',loadGravatars);$(document).on('page_loaded',function(){loadGravatars();refreshInboxCount();});}else setTimeout(init,50);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script>\n";
         jsCssLink += "<script src=\"" + data.get("context_path") + "/plugin/"+getClassName()+"/customMenuOverflow.js\"></script>\n";
             
         return jsCssLink;

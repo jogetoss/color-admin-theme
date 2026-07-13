@@ -2142,10 +2142,18 @@ body .form-cell .grid table.tablesaw, body .subform-cell .grid table.tablesaw {
     backgroud-color: #5d9cec !important;
 }
 
+/* Scope max-width to menu badges only — header notification badge must show full count */
 .badge{
     border-radius: 3px;
     font-weight: 500;
+}
+#sidebar .badge,
+.menu-container .badge,
+#category-container .badge {
     max-width: 20%;
+}
+header.navbar .header-nav .nav > li > a .badge {
+    max-width: none;
 }
 
 .menu-container > li > a > span:nth-child(1) {
