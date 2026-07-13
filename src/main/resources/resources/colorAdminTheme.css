@@ -899,17 +899,29 @@ body#login #page > header.navbar a{
 }
 
 .breadcrumb {
-    padding: 0 10px;
-    margin-bottom: 10px; 
+    padding: 2px 13px;
+    margin-bottom: 7px;
     background-color: transparent;
     text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    color: #212121;
+    font-size: 13px;
 }
 .rtl .breadcrumb {
     text-align: left;
+    justify-content: flex-start;
+}
+
+/* Hide default first-item icon (replaced by Home ::before below) */
+ul.breadcrumb > li:first-child i {
+    display: none !important;
 }
 
 .breadcrumb i.icon-angle-right {
-    display:none;
+    display: none;
 }
 
 .main-menu.nav-tabs a {
@@ -1795,10 +1807,35 @@ div#main {
 body#welcome .breadcrumb {
     display: none;
 }
-#main .breadcrumb, #main .breadcrumb a {
+.breadcrumb,
+#main .breadcrumb,
+#main .breadcrumb a,
+#content .breadcrumb,
+#content .breadcrumb a {
     color: #212121;
-    font-size: 13px
+    font-size: 13px;
 }
+
+/* Home icon on first breadcrumb item (replaces hidden fa-home <i>) */
+.breadcrumb .breadcrumb-item:first-child a::before,
+ul.breadcrumb > li:first-child > a::before {
+    font-family: FontAwesome, "Font Awesome 5 Free";
+    content: "\f015";
+    font-weight: 900;
+    margin-right: 4px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    position: relative;
+    top: -1px;
+}
+
+/* Hide empty category crumbs that create extra "/" (Home / / Form Elements) */
+ul.breadcrumb > li.breadcrumb-item:has(> a:empty) {
+    display: none !important;
+}
+
 body#welcome:not(#login) #content > main > .ui-html {
     padding: 10px 10px 60px;
     background: white;
@@ -1809,22 +1846,16 @@ body#welcome:not(#login) #content > main > .ui-html {
     margin-top: 30px;
 }
 
-/* Navigation */
-.breadcrumb {
-    font-size: 12px;
-    padding: 2px 13px;
-    margin-bottom: 7px;
-    background-color: transparent;
-    text-align: right;
+/* Navigation — clear Bootstrap/Joget divider conflicts; keep "/" via BS breadcrumb-item */
+.breadcrumb > li + li:before {
+    padding: 0;
+    content: none;
 }
-.breadcrumb>li+li:before {
-    padding: 0px;
-    color: #ccc;
-    content: "";
-}
-#content > main > .breadcrumb > li > .fa-angle-right:before {
+.breadcrumb-item + .breadcrumb-item::before {
     content: "/";
     padding: 0 8px;
+    float: none;
+    color: #212121;
 }
 
 /* Menu */
