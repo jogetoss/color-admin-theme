@@ -758,15 +758,16 @@ body .form-container .pq-td-div label.label + span:not(.form-cell-value):not(.su
 
 body .form-column, body .subform-column {
     max-width: 99%;
-    margin: 0 0.5%;
     color: inherit;
     min-width: inherit;
-    padding: 15px;
+    box-sizing: border-box;
+    float: left;
 }
 
 body .form-cell, body .subform-cell {
     color: inherit;
     padding: 0;
+    margin: 0 15px;
 }
 
 body .subform-cell-validator, body .form-cell-validator {
@@ -1288,6 +1289,31 @@ body .grid-action-header, body td.grid-action-cell {
 }
 .multiPagedForm {
     margin-bottom: 15px;
+}
+
+body .multiPagedForm .page-button-panel {
+    margin-top: 10px;
+}
+
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button,
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button {
+    margin-left: 6px;
+    min-width: 72px;
+    padding: 6px 16px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button:disabled,
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button:disabled,
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button[disabled],
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button[disabled] {
+    opacity: 1 !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    appearance: none;
 }
 .ql-container.ql-bubble{
     border-bottom: 1px solid #9E9E9E;

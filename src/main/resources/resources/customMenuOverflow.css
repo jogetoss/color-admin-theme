@@ -31,6 +31,11 @@ body.horizontal_menu #custom-menu-more {
     position: relative !important;
     display: list-item !important;
     vertical-align: top;
+    overflow: visible !important;
+}
+
+body.horizontal_menu #custom-menu-more.open {
+    z-index: 10050;
 }
 
 body.horizontal_menu #custom-menu-more > a {
@@ -50,18 +55,32 @@ body.horizontal_menu #custom-overflow-menu {
     left: auto !important;
     min-width: 260px;
     max-width: 320px;
-    max-height: 70vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: 10000;
+    max-height: min(70vh, calc(100dvh - 120px));
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
+    z-index: 10050;
     list-style: none;
     margin: 0;
     padding: 4px 0;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
 }
 
+body.horizontal_menu #custom-overflow-menu.is-fixed-panel {
+    position: fixed !important;
+    top: auto !important;
+}
+
 body.horizontal_menu #custom-menu-more.open #custom-overflow-menu {
     display: block !important;
+}
+
+body.horizontal_menu #category-container.main-menu,
+body.horizontal_menu #sidebar .nav {
+    overflow: visible !important;
 }
 
 /* Vertical stack inside overflow panel */
@@ -98,7 +117,8 @@ body.horizontal_menu #sidebar #custom-overflow-menu li ul {
     border: none !important;
     opacity: 1 !important;
     visibility: visible !important;
-    overflow: visible !important;
+    overflow: hidden !important;
+    max-height: none !important;
     background: transparent !important;
 }
 

@@ -162,7 +162,7 @@ body#login #page{
 }
 .breadcrumb,
 .breadcrumb a {
-    color: @fontLightColor;
+    color: #212121;
 }
 .breadcrumb a:last-child {
     color: #7a7a7a !important;
@@ -551,6 +551,15 @@ main .multiPagedForm.wizard .page-nav-panel .nav_item.current:after, main .multi
         border: 1px solid transparent;
     }
 }
+
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button:disabled,
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button:disabled,
+body .multiPagedForm .page-button-panel input.page-button-prev.btn.button[disabled],
+body .multiPagedForm .page-button-panel input.page-button-next.btn.button[disabled] {
+    color: fade(@buttonText, 85%) !important;
+    background-color: fade(@button, 55%) !important;
+    border: 1px solid fade(@button, 55%) !important;
+}
 main .form-cell .grid thead tr, main .subform-cell .grid thead tr {
     background: #999;
     color: @defaultFontColor;
@@ -763,9 +772,15 @@ div.form-section-title{
     color: @primary;
 }
 
-#content > main > div.datalist-body-content > h1, #content > main > div.datalist-body-content > h2, #content > main > div.datalist-body-content > h3{
-    background: @headerColor;
-    color: @headerTextColor;
+/* Datalist heading uses button colors so it matches action buttons / expected theme bar */
+.datalist-body-content h1,
+.datalist-body-content h2,
+.datalist-body-content h3,
+#content main .datalist-body-content > h1,
+#content main .datalist-body-content > h2,
+#content main .datalist-body-content > h3 {
+    background-color: @button !important;
+    color: @buttonText !important;
 }
 
 main #form-canvas .form-section-title span{
@@ -799,9 +814,11 @@ legend, main #form-canvas .subform-section-title span {
     color: @fontLabelColor;
 }
 
-.activeFont {
+#content .activeFont,
+#content .buttonFontSize.activeFont {
     color: @buttonText !important;
     background-color: @button !important;
+    border-color: @button !important;
 }
 
 /* Datalist filter submit: consistent theme button color, disable waves tint */

@@ -899,17 +899,29 @@ body#login #page > header.navbar a{
 }
 
 .breadcrumb {
-    padding: 0 10px;
-    margin-bottom: 10px; 
+    padding: 2px 13px;
+    margin-bottom: 7px;
     background-color: transparent;
     text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    color: #212121;
+    font-size: 13px;
 }
 .rtl .breadcrumb {
     text-align: left;
+    justify-content: flex-start;
+}
+
+/* Hide default first-item icon (replaced by Home ::before below) */
+ul.breadcrumb > li:first-child i {
+    display: none !important;
 }
 
 .breadcrumb i.icon-angle-right {
-    display:none;
+    display: none;
 }
 
 .main-menu.nav-tabs a {
@@ -1795,10 +1807,35 @@ div#main {
 body#welcome .breadcrumb {
     display: none;
 }
-#main .breadcrumb, #main .breadcrumb a {
+.breadcrumb,
+#main .breadcrumb,
+#main .breadcrumb a,
+#content .breadcrumb,
+#content .breadcrumb a {
     color: #212121;
-    font-size: 13px
+    font-size: 13px;
 }
+
+/* Home icon on first breadcrumb item (replaces hidden fa-home <i>) */
+.breadcrumb .breadcrumb-item:first-child a::before,
+ul.breadcrumb > li:first-child > a::before {
+    font-family: FontAwesome, "Font Awesome 5 Free";
+    content: "\f015";
+    font-weight: 900;
+    margin-right: 4px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    position: relative;
+    top: -1px;
+}
+
+/* Hide empty category crumbs that create extra "/" (Home / / Form Elements) */
+ul.breadcrumb > li.breadcrumb-item:has(> a:empty) {
+    display: none !important;
+}
+
 body#welcome:not(#login) #content > main > .ui-html {
     padding: 10px 10px 60px;
     background: white;
@@ -1809,22 +1846,16 @@ body#welcome:not(#login) #content > main > .ui-html {
     margin-top: 30px;
 }
 
-/* Navigation */
-.breadcrumb {
-    font-size: 12px;
-    padding: 2px 13px;
-    margin-bottom: 7px;
-    background-color: transparent;
-    text-align: right;
+/* Navigation — clear Bootstrap/Joget divider conflicts; keep "/" via BS breadcrumb-item */
+.breadcrumb > li + li:before {
+    padding: 0;
+    content: none;
 }
-.breadcrumb>li+li:before {
-    padding: 0px;
-    color: #ccc;
-    content: "";
-}
-#content > main > .breadcrumb > li > .fa-angle-right:before {
+.breadcrumb-item + .breadcrumb-item::before {
     content: "/";
     padding: 0 8px;
+    float: none;
+    color: #212121;
 }
 
 /* Menu */
@@ -1964,10 +1995,10 @@ body #form-canvas #section-actions{
 }
 
 
-/* Lists */
-body:not(#login) #content > main > .datalist-body-content:not(.quickEdit) {
+/* Lists — match DX9 wrapper (main > .main-body-content > .datalist-body-content) */
+body:not(#login) #content main .datalist-body-content:not(.quickEdit) {
     padding: 0px;
-    margin: 15px 0px;
+    margin: 30px 0 15px;
     border: 0px;
     border-radius: 3px;
     background: white !important;
@@ -2142,10 +2173,18 @@ body .form-cell .grid table.tablesaw, body .subform-cell .grid table.tablesaw {
     backgroud-color: #5d9cec !important;
 }
 
+/* Scope max-width to menu badges only — header notification badge must show full count */
 .badge{
     border-radius: 3px;
     font-weight: 500;
+}
+#sidebar .badge,
+.menu-container .badge,
+#category-container .badge {
     max-width: 20%;
+}
+header.navbar .header-nav .nav > li > a .badge {
+    max-width: none;
 }
 
 .menu-container > li > a > span:nth-child(1) {
@@ -2229,9 +2268,9 @@ body .grid-action-edit:hover, body .grid-action-delete:hover, body .grid-action-
 }
 
 .datalist-body-content{
-    border-left: 1px solid #cfd8dc;
-    border-right: 1px solid #cfd8dc;
-    border-top: 3px solid #cfd8dc;
+    border: 0px;
+    border-radius: 3px;
+    margin-top: 30px;
 }
 
 span.pagelinks > a:nth-child(1){
@@ -2436,26 +2475,35 @@ main .dataList .exportlinks span.export {
     background-color: #727272; 
 }
 
-#content > main > div.datalist-body-content > h1,
-#content > main > div.datalist-body-content > h2,
-#content > main > div.datalist-body-content > h3{
+/* Datalist heading — blue bar matching theme buttons (see light.less for colors) */
+.datalist-body-content h1,
+.datalist-body-content h2,
+.datalist-body-content h3,
+#content main .datalist-body-content > h1,
+#content main .datalist-body-content > h2,
+#content main .datalist-body-content > h3 {
     font-size: 20px;
     margin: 0;
     border-radius: 3px 3px 0 0;
     padding: 15px 10px;
 }
 
-#content > main > div.datalist-body-content > h4,
-#content > main > div.datalist-body-content > h5,
-#content > main > div.datalist-body-content > h6{
+.datalist-body-content h4,
+.datalist-body-content h5,
+.datalist-body-content h6,
+#content main .datalist-body-content > h4,
+#content main .datalist-body-content > h5,
+#content main .datalist-body-content > h6 {
     padding: 15px 10px;
 }
 
-#content > main > div.datalist-body-content > p{
+.datalist-body-content > p,
+#content main .datalist-body-content > p {
     padding: 0px 10px;
 }
 
-#content > main > div.datalist-body-content > div.form-cell{
+.datalist-body-content > div.form-cell,
+#content main .datalist-body-content > div.form-cell {
     padding: 0px 10px;
 }
 
@@ -2469,7 +2517,8 @@ div.exportlinks > a{
     padding: 0px 5px;
 }
 
-body:not(#login).embeded #content > main > div.datalist-body-content > h1{
+body:not(#login).embeded #content main .datalist-body-content > h1,
+body:not(#login).embeded #content main .datalist-body-content h1 {
     font-size: 28px;
     margin: 0;
     color: black;
@@ -2477,7 +2526,7 @@ body:not(#login).embeded #content > main > div.datalist-body-content > h1{
     border-radius: 3px 3px 0 0;
     padding: 0px;
 }
-body:not(#login).embeded #content > main > div.datalist-body-content > div{
+body:not(#login).embeded #content main .datalist-body-content > div {
     padding: 0px;
 }
 
@@ -2504,21 +2553,97 @@ body:not(#login).embeded #content > main > div.datalist-body-content > div{
     padding: 0px;
 }
 
-.adjustfontSize{
+/* Font size accessibility control — scoped to main content only */
+#content .adjustfontSize {
     position: relative;
-    height: 50px;
-    display: block;
-    padding: 10px !important;
-    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    min-height: 0;
+    margin: 0 0 10px;
+    padding: 6px 0 10px !important;
+    box-sizing: border-box;
 }
-.buttonFontSize {
-    font-size: 20px !important;
+
+#content .adjustfontSize > div:first-child {
+    float: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 100%;
+}
+
+#content .adjustfontSize > div[style*="clear"] {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#content .adjustfontSize > div:first-child > span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+#content .adjustfontSize .btn-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: middle;
+}
+
+#content .buttonFontSize {
+    font-size: 16px !important;
+    line-height: 1 !important;
     color: #6c757d !important;
     background-color: #ffffff !important;
-    margin-left: 1px !important;
-    padding: 3px 9px;
-    outline:none !important;
-    border: none !important;
+    margin: 0 !important;
+    padding: 6px 10px !important;
+    outline: none !important;
+    border: 1px solid #cfd8dc !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+#content .buttonFontSize:hover,
+#content .buttonFontSize:focus {
+    background-color: #f5f5f5 !important;
+    border-color: #b0bec5 !important;
+    color: #495057 !important;
+}
+
+#content .activeFont,
+#content .buttonFontSize.activeFont {
+    color: #ffffff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+body.horizontal_menu #content .adjustfontSize {
+    margin: 0 0 6px;
+    padding: 8px 0 10px !important;
+}
+
+@media screen and (max-width: 767px) {
+    #content .adjustfontSize {
+        justify-content: center;
+        padding: 8px 0 !important;
+        margin-bottom: 8px;
+    }
+
+    #content .adjustfontSize > div:first-child {
+        justify-content: center;
+        width: 100%;
+    }
 }
 .footable-buttons > button{
     margin-bottom: 5px;
