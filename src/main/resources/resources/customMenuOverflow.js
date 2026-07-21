@@ -104,6 +104,10 @@
         overflowMenu.style.maxWidth = '';
     }
 
+    function setImportant(el, prop, value) {
+        el.style.setProperty(prop, value, 'important');
+    }
+
     function positionOverflowMenu() {
         var moreLi = document.getElementById('custom-menu-more');
         var overflowMenu = document.getElementById('custom-overflow-menu');
@@ -117,17 +121,17 @@
         var maxHeight = Math.max(160, window.innerHeight - rect.bottom - gap - viewportPadding);
 
         overflowMenu.classList.add('is-fixed-panel');
-        overflowMenu.style.top = (rect.bottom + gap) + 'px';
-        overflowMenu.style.maxHeight = maxHeight + 'px';
-        overflowMenu.style.minWidth = '260px';
-        overflowMenu.style.maxWidth = Math.min(320, window.innerWidth - (viewportPadding * 2)) + 'px';
+        setImportant(overflowMenu, 'top', (rect.bottom + gap) + 'px');
+        setImportant(overflowMenu, 'max-height', maxHeight + 'px');
+        setImportant(overflowMenu, 'min-width', '260px');
+        setImportant(overflowMenu, 'max-width', Math.min(320, window.innerWidth - (viewportPadding * 2)) + 'px');
 
         if (document.body.classList.contains('rtl')) {
-            overflowMenu.style.left = Math.max(viewportPadding, rect.left) + 'px';
-            overflowMenu.style.right = 'auto';
+            setImportant(overflowMenu, 'left', Math.max(viewportPadding, rect.left) + 'px');
+            setImportant(overflowMenu, 'right', 'auto');
         } else {
-            overflowMenu.style.right = Math.max(viewportPadding, window.innerWidth - rect.right) + 'px';
-            overflowMenu.style.left = 'auto';
+            setImportant(overflowMenu, 'right', Math.max(viewportPadding, window.innerWidth - rect.right) + 'px');
+            setImportant(overflowMenu, 'left', 'auto');
         }
     }
 
